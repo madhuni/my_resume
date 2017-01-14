@@ -1,0 +1,46 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 10px;
+}
+
+.flex-box {
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.container {
+	padding: 0 1em;
+}
+
+main,
+section,
+figure,
+footer,
+div,
+h1,
+h2,
+h3,
+h4,
+p,
+hr {
+	width: 100%;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+hr {
+	margin: 0;
+}
+

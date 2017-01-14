@@ -238,3 +238,46 @@ progress::-moz-progress-value {
 	font-size: 1.4em;
 	line-height: 1.5;
 }
+
+/* Code for the "Education" section starts here */
+
+#educaiton {
+	margin: 10px 0;
+	background-color: #fff;
+	box-shadow: 5px 5px 10px;
+}
+
+.sub-section-heading {
+	font-size: 1.7em;
+	padding: 5px 0;
+}
+
+.edu-duration {
+	padding: 5px 0;
+}
+
+.edu-duration i {
+	padding-right: 5px;
+}
+
+.edu-duration i,
+.edu-duration time {
+	font-size: 1.4em;
+}
+
+.edu-location {
+	padding: 5px 0;
+}
+
+.major {
+	margin: 10px 0;
+	line-height: 1.5;
+}
+
+.major .course,
+.major .course-desc,
+.major .major-head,
+.major .major-desc {
+	font-size: 1.4em;
+}
+

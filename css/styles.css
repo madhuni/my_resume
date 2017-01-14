@@ -15,7 +15,7 @@
 }
 
 .container {
-	padding: 0 1em;
+	padding: 0 0.5em;
 }
 
 main,
@@ -47,4 +47,29 @@ hr {
 
 main {
 	flex-direction: row;
+}
+
+/* Coding for the "card-1" starts here */
+#card-1 figure {
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	border: 1px solid black;
+	margin-top: 1em;
+	height: auto;
+	max-width: 320px;
+	overflow: hidden;
+}
+figure img {
+	display: block;
+	width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+/* Hiding the image below the 767px of the viewport size*/
+@media screen and (max-width: 767px) {
+	#card-1 figure {
+		display: none;
+	}
 }

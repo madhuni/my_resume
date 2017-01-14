@@ -19,6 +19,7 @@
 }
 
 main,
+aside,
 section,
 figure,
 footer,
@@ -44,3 +45,6 @@ hr {
 	margin: 0;
 }
 
+main {
+	flex-direction: row;
+}

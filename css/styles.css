@@ -49,7 +49,17 @@ main {
 	flex-direction: row;
 }
 
+body {
+ background-color: lightgray;
+}
+
 /* Coding for the "card-1" starts here */
+#card-1 {
+	margin: 10px 0;
+	background-color: #fff;
+	box-shadow: 5px 5px 10px;
+}
+
 #card-1 figure {
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -99,6 +109,7 @@ hr {
 	padding: 5px 0;
 }
 
+/*Code for the progress-bar starts here */
 progress {
 	-webkit-appearance: progress-bar;
 	-moz-appearance: progress-bar;

@@ -281,3 +281,22 @@ progress::-moz-progress-value {
 	font-size: 1.4em;
 }
 
+/* Media query for the big devices starts here */
+@media screen and (min-width: 600px) {
+	main {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+
+	aside {
+		width: 30%;
+	}
+
+	#section-container {
+		width: 70%;
+	}
+
+	footer {
+		width: 100%;
+	}
+}

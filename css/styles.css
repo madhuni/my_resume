@@ -100,12 +100,12 @@ hr {
 }
 
 .details i {
-	font-size: 1.6em;
+	font-size: 1.4em;
 	margin-right: 5px;
 }
 
 .details span {
-	font-size: 1.6em;
+	font-size: 1.4em;
 	padding: 5px 0;
 }
 
@@ -156,3 +156,42 @@ progress::-moz-progress-value {
 	padding: 5px 0;
 }
 
+#work-experience {
+	margin: 10px 0;
+	background-color: #fff;
+	box-shadow: 5px 5px 10px;
+}
+
+/* Code for the "article" starts here */
+
+.article-heading {
+	font-size: 1.5em;
+	padding: 5px 0;
+}
+
+.job-duration {
+	font-size: 1.4em;
+	padding: 5px 0;
+	margin-right: 5px;
+}
+
+.job-duration i {
+	font-size: 1.4em;
+	padding-right: 5px;
+}
+
+.job-location {
+	font-size: 1.4em;
+	padding: 5px 0;
+}
+
+.job-location i {
+	font-size: 1.4em;
+	padding-right: 5px;
+}
+
+.job-description {
+	margin: 10px 0;
+	font-size: 1.4em;
+	line-height: 1.5;
+}

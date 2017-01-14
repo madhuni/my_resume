@@ -83,3 +83,19 @@ figure img {
 hr {
 	margin: 0.5em 0;
 }
+
+/* Rules for the "details" elements with child elements starts here*/
+.details {
+	padding: 5px 0;
+}
+
+.details i {
+	font-size: 1.4em;
+	margin-right: 5px;
+}
+
+.details span {
+	font-size: 1.4em;
+}
+
+

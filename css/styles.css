@@ -170,7 +170,6 @@ progress::-moz-progress-value {
 }
 
 .job-duration {
-	font-size: 1.4em;
 	padding: 5px 0;
 	margin-right: 5px;
 }
@@ -180,8 +179,11 @@ progress::-moz-progress-value {
 	padding-right: 5px;
 }
 
-.job-location {
+.duration {
 	font-size: 1.4em;
+}
+
+.job-location {
 	padding: 5px 0;
 }
 
@@ -190,7 +192,48 @@ progress::-moz-progress-value {
 	padding-right: 5px;
 }
 
+.description {
+	font-size: 1.4em;
+}
+
 .job-description {
+	margin: 10px 0;
+	font-size: 1.4em;
+	line-height: 1.5;
+}
+
+/* Code for the "project" sections starts here */
+#projects {
+	margin: 10px 0;
+	background-color: #fff;
+	box-shadow: 5px 5px 10px;
+}
+
+.project-duration {
+	padding: 5px 0;
+}
+
+.project-duration i {
+	padding-right: 5px;
+}
+
+.project-duration i, 
+.project-duration time {
+	font-size: 1.4em;
+}
+
+.image-container {
+	margin: 1em 0;
+	max-width: 250px;
+	overflow: hidden;
+}
+.image-container img {
+	display: block;
+	border: 1px solid black;
+	border-radius: 15px;
+}
+
+.project-description {
 	margin: 10px 0;
 	font-size: 1.4em;
 	line-height: 1.5;

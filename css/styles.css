@@ -53,6 +53,10 @@ body {
  background-color: lightgray;
 }
 
+i {
+	padding-right: 5px;
+}
+
 /* Coding for the "card-1" starts here */
 #card-1 {
 	margin: 10px 0;
@@ -104,7 +108,6 @@ hr {
 
 .details i {
 	font-size: 1.4em;
-	margin-right: 5px;
 }
 
 .details span {
@@ -182,7 +185,6 @@ progress::-moz-progress-value {
 
 .job-duration i {
 	font-size: 1.4em;
-	padding-right: 5px;
 }
 
 .duration {
@@ -195,7 +197,6 @@ progress::-moz-progress-value {
 
 .job-location i {
 	font-size: 1.4em;
-	padding-right: 5px;
 }
 
 .description {
@@ -222,10 +223,6 @@ progress::-moz-progress-value {
 	padding: 5px 0;
 }
 
-.project-duration i {
-	padding-right: 5px;
-}
-
 .project-duration i, 
 .project-duration time {
 	font-size: 1.4em;
@@ -233,7 +230,8 @@ progress::-moz-progress-value {
 
 .image-container {
 	margin: 1em 0;
-	max-width: 250px;
+	width: 100%;
+	max-width: 220px;
 	overflow: hidden;
 }
 .image-container img {
@@ -266,10 +264,6 @@ progress::-moz-progress-value {
 
 .edu-duration {
 	padding: 5px 0;
-}
-
-.edu-duration i {
-	padding-right: 5px;
 }
 
 .edu-duration i,

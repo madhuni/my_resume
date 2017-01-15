@@ -76,7 +76,9 @@ i {
 	height: auto;
 	max-width: 320px;
 	overflow: hidden;
+	margin-bottom: 10px;
 }
+
 figure img {
 	display: block;
 	width: 100%;
@@ -86,17 +88,13 @@ figure img {
 	vertical-align: middle;
 }
 
-/* Hiding the image below the 767px of the viewport size*/
-@media screen and (max-width: 767px) {
-	#card-1 figure {
-		display: none;
-	}
-}
-
 /* Rules for the title */
 .resume-title {
 	font-size: 2.5em;
-	padding: 5px 0 0;
+	color: white;
+	padding: 5px;
+	background-color: #222;
+	border-radius: 5px;
 }
 
 hr {
@@ -413,5 +411,19 @@ footer a {
 
 	footer {
 		width: 100%;
+	}
+}
+
+/* Hiding the image below the 767px of the viewport size*/
+@media screen and (max-width: 767px) {
+	#card-1 figure {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.resume-title {
+		background-color: #fff;
+		color: black;
 	}
 }

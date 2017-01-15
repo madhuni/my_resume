@@ -346,6 +346,32 @@ footer a {
 }
 
 /* Media query for the big devices starts here */
+@media screen and (max-width: 649px) {
+	.company-logo {
+		display: none;
+	}
+
+}
+
+@media screen and (min-width: 650px) {
+	#job-items {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: left;
+		align-items: center;
+	}
+
+	.company-logo {
+		padding: 5px 5px;
+		width: 55px;
+	}
+
+	.job-desc-items {
+		padding-left: 10px;
+		width: 80%;
+	}
+}
+
 @media screen and (min-width: 700px) {
 	main {
 		max-width: 960px;

@@ -15,7 +15,7 @@
 }
 
 .container {
-	padding: 0 0.5em;
+	padding: 0 1em;
 }
 
 main,
@@ -56,8 +56,11 @@ body {
 /* Coding for the "card-1" starts here */
 #card-1 {
 	margin: 10px 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	background-color: #fff;
 	box-shadow: 5px 5px 10px;
+	border-radius: 10px;
 }
 
 #card-1 figure {
@@ -65,7 +68,7 @@ body {
 	flex-wrap: wrap;
 	justify-content: center;
 	border: 0.1em solid black;
-	margin-top: 1em;
+	border-radius: 10px;
 	height: auto;
 	max-width: 320px;
 	overflow: hidden;
@@ -157,9 +160,12 @@ progress::-moz-progress-value {
 }
 
 #work-experience {
-	margin: 10px 0;
+	margin: 0 0 1em;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	background-color: #fff;
 	box-shadow: 5px 5px 10px;
+	border-radius: 10px;
 }
 
 /* Code for the "article" starts here */
@@ -204,9 +210,12 @@ progress::-moz-progress-value {
 
 /* Code for the "project" sections starts here */
 #projects {
-	margin: 10px 0;
+	margin: 0 0 1em;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	background-color: #fff;
 	box-shadow: 5px 5px 10px;
+	border-radius: 10px;
 }
 
 .project-duration {
@@ -242,9 +251,12 @@ progress::-moz-progress-value {
 /* Code for the "Education" section starts here */
 
 #educaiton {
-	margin: 10px 0;
+	margin: 0 0 1em;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	background-color: #fff;
 	box-shadow: 5px 5px 10px;
+	border-radius: 10px;
 }
 
 .sub-section-heading {
@@ -282,7 +294,7 @@ progress::-moz-progress-value {
 }
 
 /* Media query for the big devices starts here */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
 	main {
 		max-width: 960px;
 		margin: 0 auto;
@@ -294,6 +306,7 @@ progress::-moz-progress-value {
 
 	#section-container {
 		width: 70%;
+		margin-top: 10px;
 	}
 
 	footer {

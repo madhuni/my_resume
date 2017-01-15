@@ -183,6 +183,10 @@ progress::-moz-progress-value {
 
 /* Code for the "article" starts here */
 
+article {
+	padding-top: 10px;
+}
+
 .article-heading {
 	font-size: 1.5em;
 	padding: 5px 0;
@@ -257,6 +261,10 @@ progress::-moz-progress-value {
 }
 
 /* Code for the "Education" section starts here */
+
+.sub-section {
+	padding-top: 10px;
+}
 
 #educaiton {
 	margin: 0 0 1em;

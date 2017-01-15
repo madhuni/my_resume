@@ -73,8 +73,6 @@ i {
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: center;
-	border: 0.1em solid black;
-	border-radius: 10px;
 	height: auto;
 	max-width: 320px;
 	overflow: hidden;
@@ -83,6 +81,8 @@ figure img {
 	display: block;
 	width: 100%;
 	height: auto;
+	border: 0.1em transparent;
+	border-radius: 10px;
 	vertical-align: middle;
 }
 
@@ -238,7 +238,7 @@ progress::-moz-progress-value {
 }
 .image-container img {
 	display: block;
-	border: 1px solid black;
+	border: 1px transparent;
 	border-radius: 15px;
 }
 

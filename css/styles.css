@@ -270,6 +270,7 @@ progress::-moz-progress-value {
 .sub-section-heading {
 	font-size: 1.7em;
 	padding: 5px 0;
+	border-bottom: 1px solid black;
 }
 
 .edu-duration {

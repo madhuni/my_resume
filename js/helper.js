@@ -13,7 +13,7 @@ var HTMLhrRule = '<hr>';
 
 // we will keep the "#skills" section in the HTML file.
 var HTMLskillsContainer = '<div class="details flex-box"></div';
-var HTMLskillContent = '<img src="./img/web-tech-logo/%logo-image%" alt="HTML5 logo" width="25" height="25" class="tech-logo"><span>%data%</span>';
+var HTMLskillContent = '<img src="%logo-image%" alt="HTML5 logo" width="25" height="25" class="tech-logo"><span>%data%</span>';
 
 // we will keep the "#lang-section" in the HTML file.
 var HTMLlangContainer = '<div class="details"></div>';

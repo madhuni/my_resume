@@ -116,6 +116,16 @@ hr {
 	padding: 5px 0;
 }
 
+/* Rules for the details segment in the "skills" section */
+
+#skills details {
+	flex-direction: row;
+}
+
+.tech-logo {
+	margin-right: 10px;
+}
+
 /*Code for the progress-bar starts here */
 progress {
 	-webkit-appearance: progress-bar;
@@ -381,7 +391,6 @@ footer a {
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: left;
-		align-items: center;
 	}
 
 	.company-logo {

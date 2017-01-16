@@ -6,7 +6,7 @@ var HTMLresumeTitle = '<h1 class="resume-title">%data%</h1>';
 /* Variables for the "bio-section" starts here */
 // we will keep the "#contact-section" as well in the HTML file.
 var HTMLcontactContainer = '<div class="details"></div>';
-var HTMLbioContent = '<i class="fa %font-awesome-class%"></i><span>%data%</span>';
+var HTMLcontactContent = '<i class="fa %font-awesome-class%"></i><span>%data%</span>';
 
 // This needs to be added after the end of "#contact-section".
 var HTMLhrRule = '<hr>';

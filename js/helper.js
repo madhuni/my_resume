@@ -4,9 +4,12 @@ var HTMLresumeTitle = '<h1 class="resume-title">%data%</h1>';
 // we will keep the #bio-container in the HTML file.
 
 /* Variables for the "bio-section" starts here */
-// we will keep the "#bio-section" as well in the HTML file.
+// we will keep the "#contact-section" as well in the HTML file.
 var HTMLcontactContainer = '<div class="details"></div>';
 var HTMLbioContent = '<i class="fa %font-awesome-class%"></i><span>%data%</span>';
+
+// This needs to be added after the end of "#contact-section".
+var HTMLhrRule = '<hr>';
 
 // we will keep the "#skills" section in the HTML file.
 var HTMLskillsContainer = '<div class="details flex-box"></div';

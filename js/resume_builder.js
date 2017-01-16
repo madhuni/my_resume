@@ -11,12 +11,14 @@ var bio = {
 	"profilePicUrl" : "./img/my-profile-pic-2.jpg",
 
 	"contactInfo" : {
-		"location" : "Bangalore, India",
-		"email" : "kmmadhuni@gmail.com",
-		"mobile" : "+91-8954054974",
-		"gitHub" : "https://github.com/madhuni/",
-		"portfolio" : "https://madhuni.github.io/",
-		"contactInfoLogo" : ["fa-map-marker", "fa-envelope", "fa-phone", "fa-github", "fa-paperclip"]
+		"contactType" : {
+            "location" : "Bangalore, India",
+            "email" : "kmmadhuni@gmail.com",
+            "mobile" : "+91-8954054974",
+            "gitHub" : "https://github.com/madhuni/",
+            "portfolio" : "https://madhuni.github.io/"
+        },
+		"contactInfoLogo" : ["fa-map-marker", "fa-envelope", "fa-phone", "fa-github-square", "fa-paperclip"]
 	},
 
 	"skills" : {
@@ -46,3 +48,24 @@ function displayTitle() {
 };
 
 displayTitle();
+
+function displayContact() {
+    
+    var contactKeys = Object.keys(bio.contactInfo.contactType);
+    /*console.log(contactKeys);*/
+    
+    for(var i=0; i<contactKeys.length; i++) {
+        var formattedFaClass = Object.values(bio.contactInfo.contactInfoLogo)[i];
+        var formattedContactType = Object.values(bio.contactInfo.contactType)[i];
+        
+        var formattedContect = HTMLcontactContent.replace("%font-awesome-class%",formattedFaClass).replace("%data%", formattedContactType);
+        
+        $("#contact-section:last").append(HTMLcontactContainer);
+        $(".details:last").append(formattedContect);
+    }
+    
+    $(HTMLhrRule).insertAfter("#contact-section");
+};
+
+displayContact();
+

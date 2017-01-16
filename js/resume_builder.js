@@ -32,4 +32,7 @@ var bio = {
 		"langDesc" : ["English", "Hindi"],
 		"langPercent" : ["85%", "90%"]
 	}
+
 };
+
+/* Code for desplaying BIO starts here */

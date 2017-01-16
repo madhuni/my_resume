@@ -36,3 +36,13 @@ var bio = {
 };
 
 /* Code for desplaying BIO starts here */
+
+function displayTitle() {
+    var formattedTitle = HTMLresumeTitle.replace("%data%", bio.name);
+    var formattedPic = HTMLresumePic.replace("%data%", bio.profilePicUrl);
+     
+	$("#bio-container").prepend(formattedTitle);
+    $("#bio-container").prepend(formattedPic);
+};
+
+displayTitle();

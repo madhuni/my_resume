@@ -47,14 +47,12 @@ function displayTitle() {
     $("#bio-container").prepend(formattedPic);
 };
 
-displayTitle();
-
 function displayContact() {
     
     var contactKeys = Object.keys(bio.contactInfo.contactType);
     /*console.log(contactKeys);*/
     
-    for(var i=0; i<contactKeys.length; i++) {
+    for (var i=0; i<contactKeys.length; i++) {
         var formattedFaClass = Object.values(bio.contactInfo.contactInfoLogo)[i];
         var formattedContactType = Object.values(bio.contactInfo.contactType)[i];
         
@@ -67,5 +65,19 @@ function displayContact() {
     $(HTMLhrRule).insertAfter("#contact-section");
 };
 
-displayContact();
+function displaySkills() {
+    
+    for (var i=0; i<bio.skills.skillDesc.length; i++) {
+        var logoUrl = bio.skills.skillLogoUrl[i];
+        var skillDesc = bio.skills.skillDesc[i];
+        
+        var formattedSkillContent = HTMLskillContent.replace("%logo-image%", logoUrl).replace("%data%", skillDesc);
+        
+        $("#skills:last").append(HTMLskillsContainer);
+        $(".details:last").append(formattedSkillContent);
+    }
+};
 
+displayTitle();
+displayContact();
+displaySkills();

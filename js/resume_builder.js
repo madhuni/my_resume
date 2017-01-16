@@ -38,8 +38,8 @@ function displayTitle() {
     var formattedTitle = HTMLresumeTitle.replace("%data%", bio.name);
     var formattedPic = HTMLresumePic.replace("%data%", bio.profilePicUrl);
      
-	$("#bio-container").prepend(formattedTitle);
-    $("#bio-container").prepend(formattedPic);
+	$("#card-1").prepend(formattedTitle);
+    $("#card-1").prepend(formattedPic);
 };
 
 function displayContact() {
@@ -56,8 +56,6 @@ function displayContact() {
         $("#contact-section:last").append(HTMLcontactContainer);
         $(".details:last").append(formattedContect);
     }
-    
-    $(HTMLhrRule).insertAfter("#contact-section");
 };
 
 function displaySkills() {

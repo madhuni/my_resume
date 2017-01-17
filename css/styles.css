@@ -387,7 +387,7 @@ footer a {
 }
 
 @media screen and (min-width: 650px) {
-	#job-items {
+	.job-items {
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: left;

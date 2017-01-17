@@ -43,32 +43,13 @@ var workExperience = {
         "experience": "1 Year, 9 Months",
         "locaiton": "Chennai/Bangalore",
         "jobDescription": "I have worked as a Application Analyst in the EDI. EDI which stands for Electronic Data Interchange is a third party team which the client use to exchange the different kind of files in different formates to their business partners. I had to moinitor the applicaton so that the flow of flies will remain fine and do the automation for cutting down the time in day to day operations."
-    },
-    {
-        "companyName": "Cognizant Technology Solutions",
-        "companyLogo": "./img/cognizant_logo.png",
-        "jobTitle": "Application Analyst",
-        "duration": "April 2015 - Present",
-        "experience": "1 Year, 9 Months",
-        "locaiton": "Chennai/Bangalore",
-        "jobDescription": "I have worked as a Application Analyst in the EDI. EDI which stands for Electronic Data Interchange is a third party team which the client use to exchange the different kind of files in different formates to their business partners. I had to moinitor the applicaton so that the flow of flies will remain fine and do the automation for cutting down the time in day to day operations."
-    },
-    {
-        "companyName": "Cognizant Technology Solutions",
-        "companyLogo": "./img/cognizant_logo.png",
-        "jobTitle": "Application Analyst",
-        "duration": "April 2015 - Present",
-        "experience": "1 Year, 9 Months",
-        "locaiton": "Chennai/Bangalore",
-        "jobDescription": "I have worked as a Application Analyst in the EDI. EDI which stands for Electronic Data Interchange is a third party team which the client use to exchange the different kind of files in different formates to their business partners. I had to moinitor the applicaton so that the flow of flies will remain fine and do the automation for cutting down the time in day to day operations."
     }]
 };
 
 function displayWorkExperience() {
     var i;
     var jobItems = workExperience.jobs;
-    console.log(jobItems);
-    
+    // console.log(jobItems);    
     for (i=0; i<jobItems.length; i++) {
         var formattedJobDescription = HTMLjobDescription.replace("%data%", jobItems[i].jobDescription);
         var formattedCompanyLogo = HTMLcompanyLogo.replace("%data%", jobItems[i].companyLogo);
@@ -103,6 +84,25 @@ var featuredProjects = {
         "projectDescription": "I have made this iteractive resume to showcase my details on an online plateform. This resume has been built up using HTML5 and CSS3 flex box layout working across all the browsers. JQuery has been used to manipulate the DOM elements and for more features."
     }]
 };
+
+function displayProjects() {
+    var i;
+    var items = featuredProjects.projects;
+     console.log(items);
+    for (i=0; i<items.length; i++) {
+        var formattedArticleHeading = HTMLprojectArticleHeading.replace("%data%", items[i].projectTitle);
+        var formattedDuration = HTMLprojectDuration.replace("%data%", items[i].timeDuration);
+        var formattedImageSrc = HTMLimageContainer.replace("%data%", items[i].projectImageSrc);
+        var formattedDescription = HTMLprojectDescription.replace("%data%", items[i].projectDescription);
+        
+        
+        $("#projects:last").append(HTMLprojectArticle);
+        $(".projects-article:last").append(formattedArticleHeading).append(formattedDuration).append(formattedImageSrc).append(formattedDescription);
+        
+    }
+};
+
+displayProjects();
 
 /* Obeject for the Education Goes Here */
 

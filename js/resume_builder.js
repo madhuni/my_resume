@@ -1,34 +1,53 @@
 /* Making the Bio-obeject for the Resume */
 
 var bio = {
-	"name" : "Kanishka Mohan Madhuni",
-	"role" : {
-		"roleDesc" : "Front-End Web Developer",
-		"roleLogo" : "fa-briefcase"
-	},
-	"profilePicUrl" : "./img/my-profile-pic-2.jpg",
-	"contactInfo" : {
-		"contactType" : {
-            "location" : "Bangalore, India",
-            "email" : "kmmadhuni@gmail.com",
-            "mobile" : "+91-8954054974",
-            "gitHub" : "https://github.com/madhuni/",
-            "portfolio" : "https://madhuni.github.io/"
+    "name": "Kanishka Mohan Madhuni",
+    "role": {
+        "roleDesc": "Front-End Web Developer",
+        "roleLogo": "fa-briefcase"
+    },
+    "profilePicUrl": "./img/my-profile-pic-2.jpg",
+    "contactInfo": {
+        "contactType": {
+            "location": "Bangalore, India",
+            "email": "kmmadhuni@gmail.com",
+            "mobile": "+91-8954054974",
+            "gitHub": "https://github.com/madhuni/",
+            "portfolio": "https://madhuni.github.io/"
         },
-		"contactInfoLogo" : ["fa-map-marker", "fa-envelope", "fa-phone", "fa-github-square", "fa-paperclip"]
-	},
-	"skills" : {
-		"skillLogoUrl" : ["./img/web-tech-logo/html5.svg",
-			"./img/web-tech-logo/css3.svg",
-			"./img/web-tech-logo/js.svg",
-			"./img/web-tech-logo/jquery.svg",
-			"./img/web-tech-logo/bootstrap.svg"],
-		"skillDesc" : ["HTML-5", "CSS-3", "Javascript", "JQuery", "Bootstrap"]
-	},
-	"language" : {
-		"langDesc" : ["English", "Hindi"],
-		"langPercent" : ["85", "90"]
-	}
+        "contactInfoLogo": ["fa-map-marker", "fa-envelope", "fa-phone", "fa-github-square", "fa-paperclip"]
+    },
+    "skills": {
+        "skillLogoUrl": ["./img/web-tech-logo/html5.svg",
+            "./img/web-tech-logo/css3.svg",
+            "./img/web-tech-logo/js.svg",
+            "./img/web-tech-logo/jquery.svg",
+            "./img/web-tech-logo/bootstrap.svg"
+        ],
+        "skillDesc": ["HTML-5", "CSS-3", "Javascript", "JQuery", "Bootstrap"]
+    },
+    "language": {
+        "langDesc": ["English", "Hindi"],
+        "langPercent": ["85", "90"]
+    }
+ };
+
+/* Thw Work-experience object goes here */
+
+var workExperience = {
+  "jobs": [
+    {
+      "companyName": "Cognizant Technology Solutions",
+      "jobTitle": "Application Analyst",
+      "duration": "April 2015 - Present",
+      "experience": "1 Year, 9 Months",
+      "locaiton": "Chennai/Bangalore",
+      "jobDescription": "I have worked as a Application Analyst in the EDI. EDI which stands for Electronic Data Interchange is a third party team which the client use to exchange the different kind of files in different formates to their business partners. I had to moinitor the applicaton so that the flow of flies will remain fine and do the automation for cutting down the time in day to day operations."
+    }
+  ],
+  "companyLogo": [
+    "./img/cognizant_logo.png"
+  ]
 };
 
 /* Code for desplaying BIO starts here */

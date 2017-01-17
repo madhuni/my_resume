@@ -38,3 +38,17 @@ var HTMLprojectArticle = '<article id="projects-article" class="container flex-b
 var HTMLprojectDuration = '<div class="project-duration"><i class="fa fa-calendar"></i><time>%data%</time></div>';
 var HTMLimageContainer = '<div class="image-container"><img src="%data%" alt="Project Image" width="218" height="150"></div>';
 var HTMLprojectDescription = '<p class="project-description">%data%</p>';
+
+/* Helper contect for the education sections starts here */
+// we will keep both the "#online-education" and "#academic-education" in the HTML.
+// we will keep both the ".sub-section-heading" in the HTML as well.
+var HTMLonlineEduArticle = '<article id="online-edu-article" class="container"></article>';
+var HTMLarticleHeading1 = '<h4 class="article-heading">%data%</h4>';
+var HTMLeduDuration1 = '<div class="edu-duration"><i class="fa fa-calendar"></i><time>%data%</time></div>';
+var HTMLmajor1 = '<p class="major"><span class="course">Course Name: </span><span class="course-desc">%data%</span></p>';
+
+var HTMLacademicEduArticle = '<article id="academic-edu-article" class="container"></article>';
+var HTMLarticleHeading2 = '<h4 class="article-heading"><i class="fa fa-university"></i>%data% - %data%</h4>';
+var HTMLeduDuration2 = '<div class="edu-duration"><i class="fa fa-calendar"></i><time>%data%</time></div>';
+var HTMLeduLocation = '<div class="edu-location"><i class="fa fa-map-marker"></i><span class="location-description">%data%</span></div>';
+var HTMLmajor2 = '<p class="major"><span class="major-head">Major: </span><span class="major-desc">%data%</span></p>'

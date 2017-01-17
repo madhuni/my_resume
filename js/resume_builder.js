@@ -32,23 +32,41 @@ var bio = {
     }
  };
 
-/* Thw Work-experience object goes here */
+/* Work-experience object goes here */
 
 var workExperience = {
   "jobs": [
     {
       "companyName": "Cognizant Technology Solutions",
+      "companyLogo": "./img/cognizant_logo.png"
       "jobTitle": "Application Analyst",
       "duration": "April 2015 - Present",
       "experience": "1 Year, 9 Months",
       "locaiton": "Chennai/Bangalore",
       "jobDescription": "I have worked as a Application Analyst in the EDI. EDI which stands for Electronic Data Interchange is a third party team which the client use to exchange the different kind of files in different formates to their business partners. I had to moinitor the applicaton so that the flow of flies will remain fine and do the automation for cutting down the time in day to day operations."
     }
-  ],
-  "companyLogo": [
-    "./img/cognizant_logo.png"
   ]
 };
+
+/* Featured Project Obeject Goes Here */
+
+var featuredProjects = {
+    "projects" : [
+        {
+            "projectTitle" : "My Portfolio Project",
+            "timeDuration" : "December 2016",
+            "projectImageSrc" : "http://lorempixel.com/250/150",
+            "projectDescription" : "This is my portfolio Project. I have used HMTL5 for markup and CSS3 for the styling of the project. The page has been made fully responsive to work across all the devices. Bootstrap is also used to give the interactivity to the page. The CSS Flexbox layout has been used to design the entire layout of the page."
+        },
+        {
+            "projectTitle" : "My Interactive Resume",
+            "timeDuration" : "Jan 2016",
+            "projectImageSrc" : "http://lorempixel.com/250/150",
+            "projectDescription" : "I have made this iteractive resume to showcase my details on an online plateform. This resume has been built up using HTML5 and CSS3 flex box layout working across all the browsers. JQuery has been used to manipulate the DOM elements and for more features."
+        }
+    ]
+};
+
 
 /* Code for desplaying BIO starts here */
 

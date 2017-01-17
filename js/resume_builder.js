@@ -43,8 +43,50 @@ var workExperience = {
         "experience": "1 Year, 9 Months",
         "locaiton": "Chennai/Bangalore",
         "jobDescription": "I have worked as a Application Analyst in the EDI. EDI which stands for Electronic Data Interchange is a third party team which the client use to exchange the different kind of files in different formates to their business partners. I had to moinitor the applicaton so that the flow of flies will remain fine and do the automation for cutting down the time in day to day operations."
+    },
+    {
+        "companyName": "Cognizant Technology Solutions",
+        "companyLogo": "./img/cognizant_logo.png",
+        "jobTitle": "Application Analyst",
+        "duration": "April 2015 - Present",
+        "experience": "1 Year, 9 Months",
+        "locaiton": "Chennai/Bangalore",
+        "jobDescription": "I have worked as a Application Analyst in the EDI. EDI which stands for Electronic Data Interchange is a third party team which the client use to exchange the different kind of files in different formates to their business partners. I had to moinitor the applicaton so that the flow of flies will remain fine and do the automation for cutting down the time in day to day operations."
+    },
+    {
+        "companyName": "Cognizant Technology Solutions",
+        "companyLogo": "./img/cognizant_logo.png",
+        "jobTitle": "Application Analyst",
+        "duration": "April 2015 - Present",
+        "experience": "1 Year, 9 Months",
+        "locaiton": "Chennai/Bangalore",
+        "jobDescription": "I have worked as a Application Analyst in the EDI. EDI which stands for Electronic Data Interchange is a third party team which the client use to exchange the different kind of files in different formates to their business partners. I had to moinitor the applicaton so that the flow of flies will remain fine and do the automation for cutting down the time in day to day operations."
     }]
 };
+
+function displayWorkExperience() {
+    var i;
+    var jobItems = workExperience.jobs;
+    console.log(jobItems);
+    
+    for (i=0; i<jobItems.length; i++) {
+        var formattedJobDescription = HTMLjobDescription.replace("%data%", jobItems[i].jobDescription);
+        var formattedCompanyLogo = HTMLcompanyLogo.replace("%data%", jobItems[i].companyLogo);
+        var formattedCompanyAndRole = HTMLcompanyAndRole.replace("%data%",jobItems[i].companyName).replace("%data%", jobItems[i].jobTitle);
+        var formattedJobDuration = HTMLjobDuration.replace("%data%", jobItems[i].duration);
+        var formattedJobLocation = HTMLjobLocation.replace("%data%", jobItems[i].locaiton);
+        
+        $("#work-experience:last").append(HTMLworkArticle);
+        $(".work-article:last").append(formattedJobDescription);
+        $(".job-items:last").append(formattedCompanyLogo);
+        $(".job-items:last").append(HTMLjobDescItems);
+        $(".job-desc-items:last").append(formattedCompanyAndRole);
+        $(".job-desc-items:last").append(formattedJobDuration);
+        $(".job-desc-items:last").append(formattedJobLocation);
+    }
+};
+
+displayWorkExperience();
 
 /* Featured Project Obeject Goes Here */
 

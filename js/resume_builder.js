@@ -30,43 +30,66 @@ var bio = {
         "langDesc": ["English", "Hindi"],
         "langPercent": ["85", "90"]
     }
- };
+};
 
 /* Work-experience object goes here */
 
 var workExperience = {
-  "jobs": [
-    {
-      "companyName": "Cognizant Technology Solutions",
-      "companyLogo": "./img/cognizant_logo.png"
-      "jobTitle": "Application Analyst",
-      "duration": "April 2015 - Present",
-      "experience": "1 Year, 9 Months",
-      "locaiton": "Chennai/Bangalore",
-      "jobDescription": "I have worked as a Application Analyst in the EDI. EDI which stands for Electronic Data Interchange is a third party team which the client use to exchange the different kind of files in different formates to their business partners. I had to moinitor the applicaton so that the flow of flies will remain fine and do the automation for cutting down the time in day to day operations."
-    }
-  ]
+    "jobs": [{
+        "companyName": "Cognizant Technology Solutions",
+        "companyLogo": "./img/cognizant_logo.png",
+        "jobTitle": "Application Analyst",
+        "duration": "April 2015 - Present",
+        "experience": "1 Year, 9 Months",
+        "locaiton": "Chennai/Bangalore",
+        "jobDescription": "I have worked as a Application Analyst in the EDI. EDI which stands for Electronic Data Interchange is a third party team which the client use to exchange the different kind of files in different formates to their business partners. I had to moinitor the applicaton so that the flow of flies will remain fine and do the automation for cutting down the time in day to day operations."
+    }]
 };
 
 /* Featured Project Obeject Goes Here */
 
 var featuredProjects = {
-    "projects" : [
-        {
-            "projectTitle" : "My Portfolio Project",
-            "timeDuration" : "December 2016",
-            "projectImageSrc" : "http://lorempixel.com/250/150",
-            "projectDescription" : "This is my portfolio Project. I have used HMTL5 for markup and CSS3 for the styling of the project. The page has been made fully responsive to work across all the devices. Bootstrap is also used to give the interactivity to the page. The CSS Flexbox layout has been used to design the entire layout of the page."
-        },
-        {
-            "projectTitle" : "My Interactive Resume",
-            "timeDuration" : "Jan 2016",
-            "projectImageSrc" : "http://lorempixel.com/250/150",
-            "projectDescription" : "I have made this iteractive resume to showcase my details on an online plateform. This resume has been built up using HTML5 and CSS3 flex box layout working across all the browsers. JQuery has been used to manipulate the DOM elements and for more features."
-        }
-    ]
+    "projects": [{
+        "projectTitle": "My Portfolio Project",
+        "timeDuration": "December 2016",
+        "projectImageSrc": "http://lorempixel.com/250/150",
+        "projectDescription": "This is my portfolio Project. I have used HMTL5 for markup and CSS3 for the styling of the project. The page has been made fully responsive to work across all the devices. Bootstrap is also used to give the interactivity to the page. The CSS Flexbox layout has been used to design the entire layout of the page."
+    }, {
+        "projectTitle": "My Interactive Resume",
+        "timeDuration": "Jan 2016",
+        "projectImageSrc": "http://lorempixel.com/250/150",
+        "projectDescription": "I have made this iteractive resume to showcase my details on an online plateform. This resume has been built up using HTML5 and CSS3 flex box layout working across all the browsers. JQuery has been used to manipulate the DOM elements and for more features."
+    }]
 };
 
+/* Obeject for the Education Goes Here */
+
+var education = {
+    "onlineEducation": [{
+        "plateform": "Udacity",
+        "duration": "December 2016 - Present",
+        "certificationTitle": "Front End Development Nanodegree"
+    }],
+    "academics": [{
+        "collegeName": "Moradabad Institute of Technology",
+        "degree": "B.Tech.",
+        "duration": "2010-2014",
+        "location": "Moradabad, Uttar Pradesh",
+        "major": "Mechanical Engineering"
+    }, {
+        "collegeName": "Chitragupt Inter College",
+        "degree": "Intermediate",
+        "duration": "2007-2009",
+        "location": "Moradabad, Uttar Pradesh",
+        "major": "Physics, Chemistry, Maths"
+    }, {
+        "collegeName": "Chitragupt Inter College",
+        "degree": "Highschool",
+        "duration": "2006-2007",
+        "location": "Moradabad, Uttar Pradesh",
+        "major": "Physics, Chemistry, Maths"
+    }]
+};
 
 /* Code for desplaying BIO starts here */
 
@@ -74,13 +97,12 @@ function displayTitle() {
     
     var formattedTitle = HTMLresumeTitle.replace("%data%", bio.name);
     var formattedPic = HTMLresumePic.replace("%data%", bio.profilePicUrl);
-     
 	$("#card-1").prepend(formattedTitle);
     $("#card-1").prepend(formattedPic);
 };
 
 function displayContact() {
-    
+
     var contactKeys = Object.keys(bio.contactInfo.contactType);
     /*console.log(contactKeys);*/
     
@@ -89,7 +111,6 @@ function displayContact() {
         var formattedContactType = Object.values(bio.contactInfo.contactType)[i];
         
         var formattedContect = HTMLcontactContent.replace("%font-awesome-class%",formattedFaClass).replace("%data%", formattedContactType);
-        
         $("#contact-section:last").append(HTMLcontactContainer);
         $(".details:last").append(formattedContect);
     }

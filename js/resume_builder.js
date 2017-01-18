@@ -143,7 +143,44 @@ var education = {
 };
 
 
+function dispalyEducation() {
+    // displaying the Online education first
+    var eduType1 = education.onlineEducation;
+    var eduType2 = education.academics;
+    
+    $.each(eduType1, function(index, value) {
+        var formattedArticleHeading = HTMLarticleHeading1.replace("%data%",eduType1[index].plateform);
+        /*console.log(formattedArticleHeading);*/
+        var formattedEduDuration = HTMLeduDuration1.replace("%data%", eduType1[index].duration);
+        var formattedMajor = HTMLmajor1.replace("%data%", eduType1[index].certificationTitle);
+        
+        $("#online-education:last").append(HTMLonlineEduArticle);
+        $(".online-edu-article:last").append(formattedArticleHeading);
+        $(".online-edu-article:last").append(formattedEduDuration);
+        $(".online-edu-article:last").append(formattedMajor);
+        
+    });
+    
+    $.each(eduType2, function(index, value) {
+        var formattedArticleHeading = HTMLarticleHeading2.replace("%data%",eduType2[index].collegeName).replace("%data%",eduType2[index].degree);
+        var formattedEduDuration = HTMLeduDuration2.replace("%data%", eduType2[index].duration);
+        var formattedLocation = HTMLeduLocation.replace("%data%", eduType2[index].location);
+        var formattedMajor = HTMLmajor2.replace("%data%", eduType2[index].major);
+        
+        $("#academic-education:last").append(HTMLacademicEduArticle);
+        $(".academic-edu-article:last").append(formattedArticleHeading);
+        $(".academic-edu-article:last").append(formattedEduDuration);
+        $(".academic-edu-article:last").append(formattedLocation);
+        $(".academic-edu-article:last").append(formattedMajor);
+        
+    });
+    
+    $('<hr>').insertAfter(".academic-edu-article");
+    var lastChild = $("hr:last-child");
+    $(lastChild).remove();
+};
 
+dispalyEducation();
 /* Code for desplaying BIO starts here */
 
 function displayTitle() {

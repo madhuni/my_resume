@@ -65,6 +65,10 @@ function displayWorkExperience() {
         $(".job-desc-items:last").append(formattedJobDuration);
         $(".job-desc-items:last").append(formattedJobLocation);
     }
+
+    $("<hr>").insertAfter(".work-article");
+    var lastChild = $("hr:last-child");
+    $(lastChild).remove();
 };
 
 displayWorkExperience();
@@ -101,7 +105,10 @@ function displayProjects() {
         $(".projects-article:last").append(formattedArticleHeading).append(formattedDuration).append(formattedImageSrc).append(formattedDescription);
     }
 
-    $("<hr>").insertAfter(".projects-article");
+    $("<hr>").insertAfter(".projects-article"); // adding <hr> at the end of each article
+
+    var lastChild = $("hr:last-child"); // selecting the <hr> tag which is the last-element of its parent i.e. "#projects"
+    $(lastChild).remove(); // then removing that last <hr> tag from the HTML.
 };
 
 displayProjects();

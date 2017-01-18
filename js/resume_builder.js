@@ -86,10 +86,11 @@ var featuredProjects = {
 };
 
 function displayProjects() {
-    var i;
+    
     var items = featuredProjects.projects;
-     console.log(items);
-    for (i=0; i<items.length; i++) {
+     
+    for (var i=0; i<items.length; i++) {
+        
         var formattedArticleHeading = HTMLprojectArticleHeading.replace("%data%", items[i].projectTitle);
         var formattedDuration = HTMLprojectDuration.replace("%data%", items[i].timeDuration);
         var formattedImageSrc = HTMLimageContainer.replace("%data%", items[i].projectImageSrc);
@@ -98,8 +99,9 @@ function displayProjects() {
         
         $("#projects:last").append(HTMLprojectArticle);
         $(".projects-article:last").append(formattedArticleHeading).append(formattedDuration).append(formattedImageSrc).append(formattedDescription);
-        
     }
+
+    $("<hr>").insertAfter(".projects-article");
 };
 
 displayProjects();
@@ -133,6 +135,8 @@ var education = {
     }]
 };
 
+
+
 /* Code for desplaying BIO starts here */
 
 function displayTitle() {
@@ -145,12 +149,16 @@ function displayTitle() {
 
 function displayContact() {
 
-    var contactKeys = Object.keys(bio.contactInfo.contactType);
-    /*console.log(contactKeys);*/
+    var contacts = [];
     
-    for (var i=0; i<contactKeys.length; i++) {
-        var formattedFaClass = Object.values(bio.contactInfo.contactInfoLogo)[i];
-        var formattedContactType = Object.values(bio.contactInfo.contactType)[i];
+    $.each(bio.contactInfo.contactType, function(key, value){
+        contacts.push(value);
+    });    
+    // console.log(contacts);
+    for (var i=0; i<contacts.length; i++) {
+
+        var formattedFaClass = bio.contactInfo.contactInfoLogo[i];
+        var formattedContactType = contacts[i];
         
         var formattedContect = HTMLcontactContent.replace("%font-awesome-class%",formattedFaClass).replace("%data%", formattedContactType);
         $("#contact-section:last").append(HTMLcontactContainer);

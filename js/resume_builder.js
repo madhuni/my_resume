@@ -46,33 +46,6 @@ var workExperience = {
     }]
 };
 
-function displayWorkExperience() {
-    var i;
-    var jobItems = workExperience.jobs;
-    // console.log(jobItems);    
-    for (i=0; i<jobItems.length; i++) {
-        var formattedJobDescription = HTMLjobDescription.replace("%data%", jobItems[i].jobDescription);
-        var formattedCompanyLogo = HTMLcompanyLogo.replace("%data%", jobItems[i].companyLogo);
-        var formattedCompanyAndRole = HTMLcompanyAndRole.replace("%data%",jobItems[i].companyName).replace("%data%", jobItems[i].jobTitle);
-        var formattedJobDuration = HTMLjobDuration.replace("%data%", jobItems[i].duration);
-        var formattedJobLocation = HTMLjobLocation.replace("%data%", jobItems[i].locaiton);
-        
-        $("#work-experience:last").append(HTMLworkArticle);
-        $(".work-article:last").append(formattedJobDescription);
-        $(".job-items:last").append(formattedCompanyLogo);
-        $(".job-items:last").append(HTMLjobDescItems);
-        $(".job-desc-items:last").append(formattedCompanyAndRole);
-        $(".job-desc-items:last").append(formattedJobDuration);
-        $(".job-desc-items:last").append(formattedJobLocation);
-    }
-
-    $("<hr>").insertAfter(".work-article");
-    var lastChild = $("hr:last-child");
-    $(lastChild).remove();
-};
-
-displayWorkExperience();
-
 /* Featured Project Obeject Goes Here */
 
 var featuredProjects = {
@@ -88,30 +61,6 @@ var featuredProjects = {
         "projectDescription": "I have made this iteractive resume to showcase my details on an online plateform. This resume has been built up using HTML5 and CSS3 flex box layout working across all the browsers. JQuery has been used to manipulate the DOM elements and for more features."
     }]
 };
-
-function displayProjects() {
-    
-    var items = featuredProjects.projects;
-     
-    for (var i=0; i<items.length; i++) {
-        
-        var formattedArticleHeading = HTMLprojectArticleHeading.replace("%data%", items[i].projectTitle);
-        var formattedDuration = HTMLprojectDuration.replace("%data%", items[i].timeDuration);
-        var formattedImageSrc = HTMLimageContainer.replace("%data%", items[i].projectImageSrc);
-        var formattedDescription = HTMLprojectDescription.replace("%data%", items[i].projectDescription);
-        
-        
-        $("#projects:last").append(HTMLprojectArticle);
-        $(".projects-article:last").append(formattedArticleHeading).append(formattedDuration).append(formattedImageSrc).append(formattedDescription);
-    }
-
-    $("<hr>").insertAfter(".projects-article"); // adding <hr> at the end of each article
-
-    var lastChild = $("hr:last-child"); // selecting the <hr> tag which is the last-element of its parent i.e. "#projects"
-    $(lastChild).remove(); // then removing that last <hr> tag from the HTML.
-};
-
-displayProjects();
 
 /* Obeject for the Education Goes Here */
 
@@ -142,45 +91,6 @@ var education = {
     }]
 };
 
-
-function dispalyEducation() {
-    // displaying the Online education first
-    var eduType1 = education.onlineEducation;
-    var eduType2 = education.academics;
-    
-    $.each(eduType1, function(index, value) {
-        var formattedArticleHeading = HTMLarticleHeading1.replace("%data%",eduType1[index].plateform);
-        /*console.log(formattedArticleHeading);*/
-        var formattedEduDuration = HTMLeduDuration1.replace("%data%", eduType1[index].duration);
-        var formattedMajor = HTMLmajor1.replace("%data%", eduType1[index].certificationTitle);
-        
-        $("#online-education:last").append(HTMLonlineEduArticle);
-        $(".online-edu-article:last").append(formattedArticleHeading);
-        $(".online-edu-article:last").append(formattedEduDuration);
-        $(".online-edu-article:last").append(formattedMajor);
-        
-    });
-    
-    $.each(eduType2, function(index, value) {
-        var formattedArticleHeading = HTMLarticleHeading2.replace("%data%",eduType2[index].collegeName).replace("%data%",eduType2[index].degree);
-        var formattedEduDuration = HTMLeduDuration2.replace("%data%", eduType2[index].duration);
-        var formattedLocation = HTMLeduLocation.replace("%data%", eduType2[index].location);
-        var formattedMajor = HTMLmajor2.replace("%data%", eduType2[index].major);
-        
-        $("#academic-education:last").append(HTMLacademicEduArticle);
-        $(".academic-edu-article:last").append(formattedArticleHeading);
-        $(".academic-edu-article:last").append(formattedEduDuration);
-        $(".academic-edu-article:last").append(formattedLocation);
-        $(".academic-edu-article:last").append(formattedMajor);
-        
-    });
-    
-    $('<hr>').insertAfter(".academic-edu-article");
-    var lastChild = $("hr:last-child");
-    $(lastChild).remove();
-};
-
-dispalyEducation();
 /* Code for desplaying BIO starts here */
 
 function displayTitle() {
@@ -236,7 +146,94 @@ function displayLanguage() {
     }
 };
 
+function displayWorkExperience() {
+    var i;
+    var jobItems = workExperience.jobs;
+    // console.log(jobItems);    
+    for (i=0; i<jobItems.length; i++) {
+        var formattedJobDescription = HTMLjobDescription.replace("%data%", jobItems[i].jobDescription);
+        var formattedCompanyLogo = HTMLcompanyLogo.replace("%data%", jobItems[i].companyLogo);
+        var formattedCompanyAndRole = HTMLcompanyAndRole.replace("%data%",jobItems[i].companyName).replace("%data%", jobItems[i].jobTitle);
+        var formattedJobDuration = HTMLjobDuration.replace("%data%", jobItems[i].duration);
+        var formattedJobLocation = HTMLjobLocation.replace("%data%", jobItems[i].locaiton);
+        
+        $("#work-experience:last").append(HTMLworkArticle);
+        $(".work-article:last").append(formattedJobDescription);
+        $(".job-items:last").append(formattedCompanyLogo);
+        $(".job-items:last").append(HTMLjobDescItems);
+        $(".job-desc-items:last").append(formattedCompanyAndRole);
+        $(".job-desc-items:last").append(formattedJobDuration);
+        $(".job-desc-items:last").append(formattedJobLocation);
+    }
+
+    $("<hr>").insertAfter(".work-article");
+    var lastChild = $("hr:last-child");
+    $(lastChild).remove();
+};
+
+function displayProjects() {
+    
+    var items = featuredProjects.projects;
+     
+    for (var i=0; i<items.length; i++) {
+        
+        var formattedArticleHeading = HTMLprojectArticleHeading.replace("%data%", items[i].projectTitle);
+        var formattedDuration = HTMLprojectDuration.replace("%data%", items[i].timeDuration);
+        var formattedImageSrc = HTMLimageContainer.replace("%data%", items[i].projectImageSrc);
+        var formattedDescription = HTMLprojectDescription.replace("%data%", items[i].projectDescription);
+        
+        
+        $("#projects:last").append(HTMLprojectArticle);
+        $(".projects-article:last").append(formattedArticleHeading).append(formattedDuration).append(formattedImageSrc).append(formattedDescription);
+    }
+
+    $("<hr>").insertAfter(".projects-article"); // adding <hr> at the end of each article
+
+    var lastChild = $("hr:last-child"); // selecting the <hr> tag which is the last-element of its parent i.e. "#projects"
+    $(lastChild).remove(); // then removing that last <hr> tag from the HTML.
+};
+
+function dispalyEducation() {
+    // displaying the Online education first
+    var eduType1 = education.onlineEducation;
+    var eduType2 = education.academics;
+    
+    $.each(eduType1, function(index, value) {
+        var formattedArticleHeading = HTMLarticleHeading1.replace("%data%",eduType1[index].plateform);
+        /*console.log(formattedArticleHeading);*/
+        var formattedEduDuration = HTMLeduDuration1.replace("%data%", eduType1[index].duration);
+        var formattedMajor = HTMLmajor1.replace("%data%", eduType1[index].certificationTitle);
+        
+        $("#online-education:last").append(HTMLonlineEduArticle);
+        $(".online-edu-article:last").append(formattedArticleHeading);
+        $(".online-edu-article:last").append(formattedEduDuration);
+        $(".online-edu-article:last").append(formattedMajor);
+        
+    });
+    
+    $.each(eduType2, function(index, value) {
+        var formattedArticleHeading = HTMLarticleHeading2.replace("%data%",eduType2[index].collegeName).replace("%data%",eduType2[index].degree);
+        var formattedEduDuration = HTMLeduDuration2.replace("%data%", eduType2[index].duration);
+        var formattedLocation = HTMLeduLocation.replace("%data%", eduType2[index].location);
+        var formattedMajor = HTMLmajor2.replace("%data%", eduType2[index].major);
+        
+        $("#academic-education:last").append(HTMLacademicEduArticle);
+        $(".academic-edu-article:last").append(formattedArticleHeading);
+        $(".academic-edu-article:last").append(formattedEduDuration);
+        $(".academic-edu-article:last").append(formattedLocation);
+        $(".academic-edu-article:last").append(formattedMajor);
+        
+    });
+    
+    $('<hr>').insertAfter(".academic-edu-article");
+    var lastChild = $("hr:last-child");
+    $(lastChild).remove();
+};
+
 displayTitle();
 displayContact();
 displaySkills();
 displayLanguage();
+displayWorkExperience();
+displayProjects();
+dispalyEducation();

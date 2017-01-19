@@ -158,14 +158,14 @@ function displayWorkExperience() {
         var formattedJobLocation = HTMLjobLocation.replace("%data%", jobItems[i].locaiton);
         
         $("#work-experience:last").append(HTMLworkArticle);
-        $(".work-article:last").append(formattedJobDescription);
+        $(".work-article:last").append(formattedJobDescription)
         $(".job-items:last").append(formattedCompanyLogo);
         $(".job-items:last").append(HTMLjobDescItems);
         $(".job-desc-items:last").append(formattedCompanyAndRole);
         $(".job-desc-items:last").append(formattedJobDuration);
         $(".job-desc-items:last").append(formattedJobLocation);
     }
-
+    
     $("<hr>").insertAfter(".work-article");
     var lastChild = $("hr:last-child");
     $(lastChild).remove();
@@ -230,10 +230,28 @@ function dispalyEducation() {
     $(lastChild).remove();
 };
 
-displayTitle();
-displayContact();
-displaySkills();
-displayLanguage();
-displayWorkExperience();
-displayProjects();
-dispalyEducation();
+/* executing the script on loading of the complete dom */
+/* similar way we can pass the call back function in the jQuery object
+    
+    $(function() {
+        --do something here--
+    });
+
+    or we can use this:
+
+    $(document).ready(function() {
+        --do something here--
+    });
+    
+*/
+
+//here we are using the "failsafe" jQuery
+jQuery(function($) {
+    displayTitle();
+    displayContact();
+    displaySkills();
+    displayLanguage();
+    displayWorkExperience();
+    displayProjects();
+    dispalyEducation();
+});

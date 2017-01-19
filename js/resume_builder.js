@@ -255,3 +255,63 @@ jQuery(function($) {
     displayProjects();
     dispalyEducation();
 });
+
+
+jQuery(function($) {
+   
+    $("#contact-section").find('.section-heading').click(function(evt){
+    
+        $("#contact-section").find('.details').slideToggle(250);
+
+    });
+
+
+    // getting the viewport width
+    var viewportWidth = $(window).width();
+
+    console.log(viewportWidth);
+
+
+    var workArticle = $('#work-experience').find('.work-article');
+    var workSectionHeading = $("#work-experience").find('.section-heading');
+
+    // console.log(wrokArticle);
+});
+
+$(document).ready(function() {
+    checkSize();
+
+    $(window).resize(checkSize);
+});
+
+function checkSize() {
+
+    var containerWidth = $('main').width(); //numeric value
+    var sectionWidth = $('#section-container').width(); //numaric value
+    var workArticle = $('#work-experience').find('.work-article');
+    var workSectionHeading = $("#work-experience").find('.section-heading');
+    
+    console.log(containerWidth);
+    console.log(sectionWidth);
+
+    if(sectionWidth == containerWidth-20) {
+        console.log("Hi I am in the loop");
+        workArticle.hide();
+        workSectionHeading.click(function(evt) {
+
+            $('.work-article').slideToggle();
+        
+        });
+    } else {
+        console.log("if statement is not working");
+        workArticle.show();
+        workSectionHeading.click(function(evt) {
+
+            $('.work-article').stop();
+        
+        });
+    }
+};
+
+
+

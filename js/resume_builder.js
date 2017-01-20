@@ -255,14 +255,3 @@ jQuery(function($) {
     displayProjects();
     dispalyEducation();
 });
-
-
-jQuery(function($) {
-   
-    $("#contact-section").find('.section-heading').click(function(evt){
-    
-        $("#contact-section").find('.details').slideToggle(250);
-
-    });
-
-});

@@ -199,7 +199,7 @@ progress::-moz-progress-value {
 /* Code for the "article" starts here */
 
 article {
-	padding-top: 10px;
+	padding-top: 5px;
 }
 
 .article-heading {
@@ -277,6 +277,11 @@ article {
 
 /* Code for the "Education" section starts here */
 
+#online-education article,
+#academic-education article {
+	padding-top: 0;
+}
+
 .sub-section {
 	padding-top: 10px;
 }
@@ -314,7 +319,7 @@ article {
 }
 
 .major {
-	margin: 10px 0;
+	margin: 5px 0;
 	line-height: 1.5;
 }
 

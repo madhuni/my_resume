@@ -56,7 +56,7 @@ body {
 }
 
 i {
-	padding-right: 5px;
+	padding-right: 10px;
 }
 
 /* Coding for the "card-1" starts here */
@@ -90,6 +90,7 @@ figure img {
 
 /* Rules for the title */
 .resume-title {
+	text-align: center;
 	font-size: 2.5em;
 	color: white;
 	padding: 5px;
@@ -100,6 +101,11 @@ figure img {
 
 hr {
 	margin: 0.5em 0;
+}
+
+/* Rules for the section-heading starts here */
+#bio-container section {
+	margin-bottom: 5px;
 }
 
 /* Rules for the "details" elements with child elements starts here*/
@@ -118,7 +124,7 @@ hr {
 
 /* Rules for the details segment in the "skills" section */
 
-#skills details {
+#skills .details {
 	flex-direction: row;
 }
 
@@ -404,9 +410,46 @@ footer a {
 	}
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 551px) and (max-width: 919px) {
+	#bio-container {
+		flex-direction: row;
+	}
+	
+	#contact-section,
+	#lang-section {
+		width: 50%;
+	}
+
+	#contact-section {
+		order: -2;
+	}
+
+	#lang-section {
+		order: -1;
+	}
+
+	#contact-section hr,
+	#lang-section hr {
+		width: 90%;
+	}
+
+}
+
+/*@media screen and (min-width: 651px) and (max-width: 919px;) {
+	#bio-container {
+		flex-direction: row;
+	}
+
+	#contact-section,
+	#skills,
+	#lang-section {
+		width: 33.33%;
+	}	
+}*/
+
+@media screen and (min-width: 920px) {
 	main {
-		max-width: 1024px;
+		max-width: 1100px;
 		margin: 0 auto;
 	}
 
@@ -425,17 +468,64 @@ footer a {
 }
 
 /* Hiding the image below the 767px of the viewport size*/
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 919px) {
 	#card-1 figure {
-		display: none;
+		/*display: none;*/
+		margin-left: auto;
+		margin-right: auto;
+	}
+		
+	/* Rules for the sectons in the card-1 starts here */
+	
+	#skills {
+		flex-direction: row;
+		/*justify-content: center;*/
+	}
+
+	#skills .details img,
+	#skills .details span {
+		display: block;
+	}
+
+	#skills .details img {
+		margin: auto;
 	}
 }
 
-@media screen and (min-width: 768px) {
+/* Setting different breakpoints for the 'details' in the skill section */
+@media screen and (min-width: 320px) and (max-width: 400px) {
+	#skills .details {
+		flex-direction: column;
+		text-align: center;
+		width: 30%;
+	}
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px){
+	#skills .details {
+		flex-direction: column;
+		text-align: center;
+		width: 20%;
+		max-width: 80px;
+	}
+}
+
+@media screen and (min-width: 601px) and (max-width: 919px){
+	#skills .details {
+		flex-direction: column;
+		text-align: center;
+		width: 15%;
+		max-width: 80px;
+	}
+}
+
+/* ------------------------------------------------------------------- */
+
+/*@media screen and (min-width: 768px) {
 	.resume-title {
 		background-color: #fff;
 		color: black;
 		border-bottom: 1px solid black;
 		border-radius: 0;
 	}
-}
+}*/

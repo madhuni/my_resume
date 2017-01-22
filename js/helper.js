@@ -27,7 +27,8 @@ var HTMLworkArticle = '<article class="work-article container"><div class="job-i
 var HTMLjobDescription = '<p class="job-description">%data%</p>';
 var HTMLcompanyLogo = '<div class="company-logo"><img src="%data%" alt="Company Logo" width="45" height="45"></div>';
 var HTMLjobDescItems = '<div class="job-desc-items"></div>';
-var HTMLcompanyAndRole = '<h4 class="article-heading">%data%/%data%';
+var HTMLcompany = '<h4 class="article-heading">%data%</h4>';
+var HTMLrole = '<h4 class="article-heading">%data%</h4>';
 var HTMLjobDuration = '<div class="job-duration"><i class="fa  fa-calendar"></i><span class="duration">%data%</span></div>';
 var HTMLjobLocation = '<div class="job-location"><i class="fa fa-map-marker"></i><span class="location-description">%data%</span></div>';
 

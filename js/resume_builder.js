@@ -34,16 +34,43 @@ var bio = {
 
 /* Work-experience object goes here */
 
-var workExperience = {
+var work = {
     "jobs": [{
-        "companyName": "Cognizant Technology Solutions",
-        "companyLogo": "./img/cognizant_logo.png",
-        "jobTitle": "Application Analyst",
-        "duration": "April 2015 - Present",
-        "experience": "1 Year, 9 Months",
+        "employer": "Cognizant Technology Solutions",
+        "title": "Application Analyst",
         "locaiton": "Chennai/Bangalore",
-        "jobDescription": "I have worked as a Application Analyst in the EDI. EDI which stands for Electronic Data Interchange is a third party team which the client use to exchange the different kind of files in different formates to their business partners. I had to moinitor the applicaton so that the flow of flies will remain fine and do the automation for cutting down the time in day to day operations."
+        "dates": "April 2015 - Present",
+        "description": "I have worked as a Application Analyst in the EDI. EDI which stands for Electronic Data Interchange is a third party team which the client use to exchange the different kind of files in different formates to their business partners. I had to moinitor the applicaton so that the flow of flies will remain fine and do the automation for cutting down the time in day to day operations.",
+        "companyLogo": "./img/cognizant_logo.png",
+        "experience": "1 Year, 9 Months"
     }]
+};
+
+work.display = function() {
+    var i;
+    var jobItems = work.jobs;
+    // console.log(jobItems);    
+    for (i=0; i<jobItems.length; i++) {
+        var formattedDescription = HTMLjobDescription.replace("%data%", jobItems[i].description);
+        var formattedCompanyLogo = HTMLcompanyLogo.replace("%data%", jobItems[i].companyLogo);
+        var formattedCompany = HTMLcompany.replace("%data%",jobItems[i].employer);
+        var formattedRole = HTMLrole.replace("%data%", jobItems[i].title);
+        var formattedJobDates = HTMLjobDuration.replace("%data%", jobItems[i].dates);
+        var formattedJobLocation = HTMLjobLocation.replace("%data%", jobItems[i].locaiton);
+        
+        $("#work-experience:last").append(HTMLworkArticle);
+        $(".work-article:last").append(formattedDescription)
+        $(".job-items:last").append(formattedCompanyLogo);
+        $(".job-items:last").append(HTMLjobDescItems);
+        $(".job-desc-items:last").append(formattedRole);
+        $(".job-desc-items:last").append(formattedCompany);
+        $(".job-desc-items:last").append(formattedJobDates);
+        $(".job-desc-items:last").append(formattedJobLocation);
+    }
+    
+    $("<hr>").insertAfter(".work-article");
+    var lastChild = $("hr:last-child");
+    $(lastChild).remove();
 };
 
 /* Featured Project Obeject Goes Here */
@@ -146,31 +173,6 @@ function displayLanguage() {
     }
 };
 
-function displayWorkExperience() {
-    var i;
-    var jobItems = workExperience.jobs;
-    // console.log(jobItems);    
-    for (i=0; i<jobItems.length; i++) {
-        var formattedJobDescription = HTMLjobDescription.replace("%data%", jobItems[i].jobDescription);
-        var formattedCompanyLogo = HTMLcompanyLogo.replace("%data%", jobItems[i].companyLogo);
-        var formattedCompanyAndRole = HTMLcompanyAndRole.replace("%data%",jobItems[i].companyName).replace("%data%", jobItems[i].jobTitle);
-        var formattedJobDuration = HTMLjobDuration.replace("%data%", jobItems[i].duration);
-        var formattedJobLocation = HTMLjobLocation.replace("%data%", jobItems[i].locaiton);
-        
-        $("#work-experience:last").append(HTMLworkArticle);
-        $(".work-article:last").append(formattedJobDescription)
-        $(".job-items:last").append(formattedCompanyLogo);
-        $(".job-items:last").append(HTMLjobDescItems);
-        $(".job-desc-items:last").append(formattedCompanyAndRole);
-        $(".job-desc-items:last").append(formattedJobDuration);
-        $(".job-desc-items:last").append(formattedJobLocation);
-    }
-    
-    $("<hr>").insertAfter(".work-article");
-    var lastChild = $("hr:last-child");
-    $(lastChild).remove();
-};
-
 function displayProjects() {
     
     var items = featuredProjects.projects;
@@ -230,101 +232,13 @@ function dispalyEducation() {
     $(lastChild).remove();
 };
 
-/* executing the script on loading of the complete dom */
-/* similar way we can pass the call back function in the jQuery object
-    
-    $(function() {
-        --do something here--
-    });
-
-    or we can use this:
-
-    $(document).ready(function() {
-        --do something here--
-    });
-    
-*/
-
-// getting the viewport width
-var viewportWidth = $(window).width();
-// console.log(viewportWidth);
-var workArticle = $('#work-experience').find('.work-article');
-var projectArticle = $('#projects').find('projects-article');
-var eduArticle = $('#educaiton').children('section');
-// console.log(eduArticle);
-
-var workSectionHeading = $("#work-experience").find('.section-heading');
-var projectSectionHeading = $("#projects").find('.section-heading');
-var eduSectionHeading = $("#educaiton").find('.section-heading');
-// console.log(eduSectionHeading);
-
-function checkSize() {
-
-    var containerWidth = $('main').width(); //numeric value
-    var sectionWidth = $('#section-container').width(); //numaric value
-
-    // console.log(containerWidth);
-    // console.log(sectionWidth);
-
-    if(sectionWidth == containerWidth-20) {
-        // console.log("Hi I am in the loop");
-        workArticle.hide();
-    } else {
-        // console.log("if statement is not working");
-        workArticle.show();
-        projectArticle.show();
-        eduArticle.show();
-        workSectionHeading.click(function(evt) {
-
-            $('.work-article').stop();
-        
-        });
-        projectSectionHeading.click(function(evt) {
-
-            $('.projects-article').stop();
-        
-        });
-        eduSectionHeading.click(function(evt) {
-
-            eduArticle.stop();
-        
-        });
-    }
-};
-
-// var workArticle = $('#work-experience').find('.work-article');
-// var workSectionHeading = $("#work-experience").find('.section-heading');
-// console.log(wrokArticle);
-
-$(document).ready(function() {
-    checkSize();
-
-    $(window).resize(checkSize);
-
-    workSectionHeading.click(function(evt) {
-
-        $('.work-article').slideToggle();
-        
-    });
-    projectSectionHeading.click(function(evt) {
-
-        $('.projects-article').slideToggle();
-        
-    });
-    eduSectionHeading.click(function(evt) {
-
-        eduArticle.slideToggle();
-        
-    });
-});
-
 //here we are using the "failsafe" jQuery
 jQuery(function($) {
     displayTitle();
     displayContact();
     displaySkills();
     displayLanguage();
-    displayWorkExperience();
+    work.display();
     displayProjects();
     dispalyEducation();
 });

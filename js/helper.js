@@ -37,7 +37,7 @@ var HTMLjobLocation = '<div class="job-location"><i class="fa fa-map-marker"></i
 var HTMLprojectArticle = '<article class="projects-article container flex-box"></article>';
 var HTMLprojectArticleHeading = '<h4 class="article-heading">%data%</h4>';
 var HTMLprojectDuration = '<div class="project-duration"><i class="fa fa-calendar"></i><time>%data%</time></div>';
-var HTMLimageContainer = '<div class="image-container"><img src="%data%" alt="Project Image" width="218" height="150"></div>';
+var HTMLimageContainer = '<div class="image-wrapper"><div class="image-container"><img src="%data%" alt="Project Image"></div></div>';
 var HTMLprojectDescription = '<p class="project-description">%data%</p>';
 
 /* Helper contect for the education sections starts here */

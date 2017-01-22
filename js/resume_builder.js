@@ -52,12 +52,12 @@ var featuredProjects = {
     "projects": [{
         "projectTitle": "My Portfolio Project",
         "timeDuration": "December 2016",
-        "projectImageSrc": "http://lorempixel.com/250/150",
+        "projectImageSrc": "http://lorempixel.com/1200/720",
         "projectDescription": "This is my portfolio Project. I have used HMTL5 for markup and CSS3 for the styling of the project. The page has been made fully responsive to work across all the devices. Bootstrap is also used to give the interactivity to the page. The CSS Flexbox layout has been used to design the entire layout of the page."
     }, {
         "projectTitle": "My Interactive Resume",
         "timeDuration": "Jan 2016",
-        "projectImageSrc": "http://lorempixel.com/250/150",
+        "projectImageSrc": "http://lorempixel.com/1200/720",
         "projectDescription": "I have made this iteractive resume to showcase my details on an online plateform. This resume has been built up using HTML5 and CSS3 flex box layout working across all the browsers. JQuery has been used to manipulate the DOM elements and for more features."
     }]
 };
@@ -245,6 +245,79 @@ function dispalyEducation() {
     
 */
 
+// getting the viewport width
+var viewportWidth = $(window).width();
+// console.log(viewportWidth);
+var workArticle = $('#work-experience').find('.work-article');
+var projectArticle = $('#projects').find('projects-article');
+var eduArticle = $('#educaiton').children('section');
+// console.log(eduArticle);
+
+var workSectionHeading = $("#work-experience").find('.section-heading');
+var projectSectionHeading = $("#projects").find('.section-heading');
+var eduSectionHeading = $("#educaiton").find('.section-heading');
+// console.log(eduSectionHeading);
+
+function checkSize() {
+
+    var containerWidth = $('main').width(); //numeric value
+    var sectionWidth = $('#section-container').width(); //numaric value
+
+    // console.log(containerWidth);
+    // console.log(sectionWidth);
+
+    if(sectionWidth == containerWidth-20) {
+        // console.log("Hi I am in the loop");
+        workArticle.hide();
+    } else {
+        // console.log("if statement is not working");
+        workArticle.show();
+        projectArticle.show();
+        eduArticle.show();
+        workSectionHeading.click(function(evt) {
+
+            $('.work-article').stop();
+        
+        });
+        projectSectionHeading.click(function(evt) {
+
+            $('.projects-article').stop();
+        
+        });
+        eduSectionHeading.click(function(evt) {
+
+            eduArticle.stop();
+        
+        });
+    }
+};
+
+// var workArticle = $('#work-experience').find('.work-article');
+// var workSectionHeading = $("#work-experience").find('.section-heading');
+// console.log(wrokArticle);
+
+$(document).ready(function() {
+    checkSize();
+
+    $(window).resize(checkSize);
+
+    workSectionHeading.click(function(evt) {
+
+        $('.work-article').slideToggle();
+        
+    });
+    projectSectionHeading.click(function(evt) {
+
+        $('.projects-article').slideToggle();
+        
+    });
+    eduSectionHeading.click(function(evt) {
+
+        eduArticle.slideToggle();
+        
+    });
+});
+
 //here we are using the "failsafe" jQuery
 jQuery(function($) {
     displayTitle();
@@ -255,3 +328,4 @@ jQuery(function($) {
     displayProjects();
     dispalyEducation();
 });
+

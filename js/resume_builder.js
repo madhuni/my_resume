@@ -77,16 +77,38 @@ work.display = function() {
 
 var featuredProjects = {
     "projects": [{
-        "projectTitle": "My Portfolio Project",
-        "timeDuration": "December 2016",
-        "projectImageSrc": "http://lorempixel.com/1200/720",
-        "projectDescription": "This is my portfolio Project. I have used HMTL5 for markup and CSS3 for the styling of the project. The page has been made fully responsive to work across all the devices. Bootstrap is also used to give the interactivity to the page. The CSS Flexbox layout has been used to design the entire layout of the page."
+        "title": "My Portfolio Project",
+        "dates": "December 2016",
+        "description": "This is my portfolio Project. I have used HMTL5 for markup and CSS3 for the styling of the project. The page has been made fully responsive to work across all the devices. Bootstrap is also used to give the interactivity to the page. The CSS Flexbox layout has been used to design the entire layout of the page.",
+        "images": "http://lorempixel.com/1200/720"
     }, {
-        "projectTitle": "My Interactive Resume",
-        "timeDuration": "Jan 2016",
-        "projectImageSrc": "http://lorempixel.com/1200/720",
-        "projectDescription": "I have made this iteractive resume to showcase my details on an online plateform. This resume has been built up using HTML5 and CSS3 flex box layout working across all the browsers. JQuery has been used to manipulate the DOM elements and for more features."
+        "title": "My Interactive Resume",
+        "dates": "Jan 2016",
+        "description": "I have made this iteractive resume to showcase my details on an online plateform. This resume has been built up using HTML5 and CSS3 flex box layout working across all the browsers. JQuery has been used to manipulate the DOM elements and for more features.",
+        "images": "http://lorempixel.com/1200/720"
     }]
+};
+
+featuredProjects.display = function() {
+    
+    var items = featuredProjects.projects;
+     
+    for (var i=0; i<items.length; i++) {
+        
+        var formattedArticleHeading = HTMLprojectArticleHeading.replace("%data%", items[i].title);
+        var formattedDuration = HTMLprojectDuration.replace("%data%", items[i].dates);
+        var formattedImageSrc = HTMLimageContainer.replace("%data%", items[i].images);
+        var formattedDescription = HTMLprojectDescription.replace("%data%", items[i].description);
+        
+        
+        $("#projects:last").append(HTMLprojectArticle);
+        $(".projects-article:last").append(formattedArticleHeading).append(formattedDuration).append(formattedImageSrc).append(formattedDescription);
+    }
+
+    $("<hr>").insertAfter(".projects-article"); // adding <hr> at the end of each article
+
+    var lastChild = $("hr:last-child"); // selecting the <hr> tag which is the last-element of its parent i.e. "#projects"
+    $(lastChild).remove(); // then removing that last <hr> tag from the HTML.
 };
 
 /* Obeject for the Education Goes Here */
@@ -173,28 +195,6 @@ function displayLanguage() {
     }
 };
 
-function displayProjects() {
-    
-    var items = featuredProjects.projects;
-     
-    for (var i=0; i<items.length; i++) {
-        
-        var formattedArticleHeading = HTMLprojectArticleHeading.replace("%data%", items[i].projectTitle);
-        var formattedDuration = HTMLprojectDuration.replace("%data%", items[i].timeDuration);
-        var formattedImageSrc = HTMLimageContainer.replace("%data%", items[i].projectImageSrc);
-        var formattedDescription = HTMLprojectDescription.replace("%data%", items[i].projectDescription);
-        
-        
-        $("#projects:last").append(HTMLprojectArticle);
-        $(".projects-article:last").append(formattedArticleHeading).append(formattedDuration).append(formattedImageSrc).append(formattedDescription);
-    }
-
-    $("<hr>").insertAfter(".projects-article"); // adding <hr> at the end of each article
-
-    var lastChild = $("hr:last-child"); // selecting the <hr> tag which is the last-element of its parent i.e. "#projects"
-    $(lastChild).remove(); // then removing that last <hr> tag from the HTML.
-};
-
 function dispalyEducation() {
     // displaying the Online education first
     var eduType1 = education.onlineEducation;
@@ -239,7 +239,7 @@ jQuery(function($) {
     displaySkills();
     displayLanguage();
     work.display();
-    displayProjects();
+    featuredProjects.display();
     dispalyEducation();
 });
 

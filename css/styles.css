@@ -68,14 +68,8 @@ i {
 	font-size: 1.2em;
 }
 
-.show-less {
-	font-size: 1.2em;
-}
-
 .more-details:hover {
 	cursor: pointer;
-	text-decoration: underline;
-	color: blue;
 }
 
 /* Coding for the "card-1" starts here */
@@ -219,11 +213,23 @@ progress::-moz-progress-value {
 
 article {
 	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
 }
 
 .article-heading {
 	font-size: 1.5em;
 	padding: 5px 0;
+}
+
+.up-down {
+	font-size: 1.2em;
+	padding-right: 5px;
+	font-weight: bold;	
+}
+
+.job-items {
+	margin-bottom: 10px;
 }
 
 .job-duration {
@@ -252,7 +258,7 @@ article {
 }
 
 .job-description {
-	margin: 10px 0;
+	padding: 5px 0;
 	font-size: 1.4em;
 	line-height: 1.5;
 }

@@ -43,6 +43,14 @@ var work = {
         "description": "I have worked as a Application Analyst in the EDI. EDI which stands for Electronic Data Interchange is a third party team which the client use to exchange the different kind of files in different formates to their business partners. I had to moinitor the applicaton so that the flow of flies will remain fine and do the automation for cutting down the time in day to day operations.",
         "companyLogo": "./img/cognizant_logo.png",
         "experience": "1 Year, 9 Months"
+    }, {
+        "employer": "Cognizant Technology Solutions",
+        "title": "Application Analyst",
+        "locaiton": "Chennai/Bangalore",
+        "dates": "April 2015 - Present",
+        "description": "I have worked as a Application Analyst in the EDI. EDI which stands for Electronic Data Interchange is a third party team which the client use to exchange the different kind of files in different formates to their business partners. I had to moinitor the applicaton so that the flow of flies will remain fine and do the automation for cutting down the time in day to day operations.",
+        "companyLogo": "./img/cognizant_logo.png",
+        "experience": "1 Year, 9 Months"
     }]
 };
 
@@ -68,7 +76,7 @@ work.display = function() {
         $(".job-desc-items:last").append(formattedJobLocation);
     }
     
-    $("<hr>").insertAfter(".work-article");
+    $("<hr class='hidden'>").insertAfter(".work-article");
     var lastChild = $("hr:last-child");
     $(lastChild).remove();
 };

@@ -90,22 +90,31 @@
 
     var tapTarget = $('#work-experience').children('.section-heading');
     var toggleTarget = $('#work-experience').children('.work-article');
+    var hrRule = $('#work-experience').children('hr');
     
-    tapTarget.click(function(evt) {
-        toggleTarget.slideToggle();
-    });
+     tapTarget.click(function(evt) {
+         toggleTarget.slideToggle();
+         hrRule.slideToggle();
+     });
 
     var moreDetails= $('.work-article').children('.more-details');
+
     moreDetails.click(function(evt) {
         
-        var desc = $('.more-details').text();
+        var parentElement = (evt.target).parentElement;
+        var desc = $(parentElement).children('.more-details').text();
+        var target = $(parentElement).children('.job-description');
+
+        // console.log($(parentElement).children('i'));
 
         if (desc === "Show more") {
-            $('.work-article').children('.job-description').slideToggle();
-            $('.more-details').text("Show less");
+            target.slideToggle();
+            $(parentElement).children('.more-details').text("Show less");
+            $(parentElement).children('i').toggleClass('fa-angle-down').addClass('fa-angle-up');
         } else {
-            $('.work-article').children('.job-description').slideToggle();
-            $('.more-details').text("Show more");
+            target.slideToggle();
+            $(parentElement).children('.more-details').text("Show more");
+            $(parentElement).children('i').toggleClass('fa-angle-up').addClass('fa-angle-down');
         }
     });
 

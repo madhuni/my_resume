@@ -35,7 +35,7 @@ var HTMLjobLocation = '<div class="job-location"><i class="fa fa-map-marker"></i
 /* Helper content for the portfolio section starts here */
 // we will keep the "#projects" section in the HTML.
 // Section heading will also be there in the HTML.
-var HTMLprojectArticle = '<article class="projects-article container"></article>';
+var HTMLprojectArticle = '<article class="projects-article container flex-box"></article>';
 var HTMLprojectArticleHeading = '<h4 class="article-heading">%data%</h4>';
 var HTMLprojectDuration = '<div class="project-duration"><i class="fa fa-calendar"></i><time>%data%</time></div>';
 var HTMLimageContainer = '<div class="image-wrapper"><div class="image-container"><img src="%data%" alt="Project Image"></div></div>';

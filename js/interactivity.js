@@ -88,19 +88,28 @@
 
  $(function($) {
 
-    var tapTarget = $('#work-experience').children('.section-heading');
-    var toggleTarget = $('#work-experience').children('.work-article');
-    var hrRule = $('#work-experience').children('hr');
-    
-     tapTarget.click(function(evt) {
-         toggleTarget.slideToggle();
-         hrRule.slideToggle();
-     });
+    /* Creating function for toggling the sections in the section-container */
+    function toggleSections(parent) {
 
-    
-    var jobMoreDetails= $('.work-article').children('.more-details');
-    var projectMoreDetails = $('.projects-article').children('.more-details');
-     
+        var tapTarget = parent.children('.section-heading');
+        var toggleTarget = parent.children('article');
+        var hrRule = parent.children('hr');
+        
+        tapTarget.click(function(evt) {
+            toggleTarget.slideToggle();
+            hrRule.slideToggle();
+        });
+
+    };
+
+    var jobParent = $('#work-experience');
+    var projectParent = $('#projects');
+
+    // Initializing the function
+    toggleSections(jobParent);
+    toggleSections(projectParent);
+
+    /* Creating function for displaying hidden details in the articles */ 
     function displayMoreDetails(moreDetails) {
         console.log(moreDetails);
 
@@ -125,6 +134,10 @@
 
     };
 
+    var jobMoreDetails= $('.work-article').children('.more-details');
+    var projectMoreDetails = $('.projects-article').children('.more-details');
+
+    // Initializing the function
     displayMoreDetails(jobMoreDetails);
     displayMoreDetails(projectMoreDetails);
 

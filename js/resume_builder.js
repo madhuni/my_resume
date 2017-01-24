@@ -76,7 +76,7 @@ work.display = function() {
         $(".job-desc-items:last").append(formattedJobLocation);
     }
     
-    $("<hr class='hidden'>").insertAfter(".work-article");
+    $("<hr>").insertAfter(".work-article");
     var lastChild = $("hr:last-child");
     $(lastChild).remove();
 };

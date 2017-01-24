@@ -23,7 +23,7 @@ var HTMLlangContent = '<span>%data%</span><progress value="%cur-value%" max="100
 /* Templet for the work-experience section starts here */
 // we will keep the "#work-experience" section in the HTML.
 // Section heading will also be there in the HTML.
-var HTMLworkArticle = '<article class="work-article container hidden"><div class="job-items flex-box"></div></article>';
+var HTMLworkArticle = '<article class="work-article container"><div class="job-items flex-box"></div></article>';
 var HTMLjobDescription = '<i class="fa fa-angle-down up-down"></i><span class="more-details">Show more</span><p class="job-description hidden">%data%</p>';
 var HTMLcompanyLogo = '<div class="company-logo"><img src="%data%" alt="Company Logo" width="45" height="45"></div>';
 var HTMLjobDescItems = '<div class="job-desc-items"></div>';

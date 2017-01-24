@@ -191,6 +191,7 @@ progress::-moz-progress-value {
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-left: 5px;
+	margin-bottom: 10px;
 }
 
 #section-container .section-heading {
@@ -224,6 +225,10 @@ article {
 	font-size: 1.2em;
 	padding-right: 5px;
 	font-weight: bold;
+}
+
+.up-down:hover {
+	cursor: pointer;
 }
 
 .job-items {
@@ -268,6 +273,13 @@ article {
 	padding-bottom: 10px;
 	background-color: #fff;
 	box-shadow: 5px 5px 10px;
+	flex-direction: row;
+}
+
+.projects-article {
+	width: 100%;
+	flex-direction: column;
+	text-align: center;
 }
 
 .project-duration {
@@ -282,7 +294,7 @@ article {
 .image-wrapper {
 	max-width: 250px;
 	max-height: 150px;
-	margin: 1em 0;
+	margin: 1em auto;
 }
 
 .image-container {
@@ -304,6 +316,7 @@ article {
 	padding-bottom: 5px;
 	font-size: 1.4em;
 	line-height: 1.5;
+	text-align: justify;
 }
 
 /* Code for the "Education" section starts here */
@@ -554,6 +567,11 @@ footer a {
 	}
 }
 
+@media screen and (min-width: 650px) {
+	.projects-article {
+		width: 50%;
+	}
+}
 /* ------------------------------------------------------------------- */
 
 /*@media screen and (min-width: 768px) {

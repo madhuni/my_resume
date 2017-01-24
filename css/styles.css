@@ -79,7 +79,6 @@ i {
 	padding-bottom: 10px;
 	background-color: #fff;
 	box-shadow: 5px 5px 10px;
-	border-radius: 10px;
 }
 
 #card-1 figure {
@@ -96,7 +95,7 @@ figure img {
 	display: block;
 	width: 100%;
 	height: auto;
-	border: 0.1em transparent;
+	border: 0.2em solid black;
 	border-radius: 10px;
 	vertical-align: middle;
 }
@@ -206,7 +205,6 @@ progress::-moz-progress-value {
 	padding-bottom: 10px;
 	background-color: #fff;
 	box-shadow: 5px 5px 10px;
-	border-radius: 10px;
 }
 
 /* Code for the "article" starts here */
@@ -270,7 +268,6 @@ article {
 	padding-bottom: 10px;
 	background-color: #fff;
 	box-shadow: 5px 5px 10px;
-	border-radius: 10px;
 }
 
 .project-duration {
@@ -326,7 +323,6 @@ article {
 	padding-bottom: 10px;
 	background-color: #fff;
 	box-shadow: 5px 5px 10px;
-	border-radius: 10px;
 }
 
 .sub-section-heading {

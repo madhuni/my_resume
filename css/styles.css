@@ -225,7 +225,7 @@ article {
 .up-down {
 	font-size: 1.2em;
 	padding-right: 5px;
-	font-weight: bold;	
+	font-weight: bold;
 }
 
 .job-items {
@@ -303,7 +303,8 @@ article {
 }
 
 .project-description {
-	margin: 10px 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	font-size: 1.4em;
 	line-height: 1.5;
 }

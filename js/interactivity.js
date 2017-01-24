@@ -97,25 +97,35 @@
          hrRule.slideToggle();
      });
 
-    var moreDetails= $('.work-article').children('.more-details');
+    
+    var jobMoreDetails= $('.work-article').children('.more-details');
+    var projectMoreDetails = $('.projects-article').children('.more-details');
+     
+    function displayMoreDetails(moreDetails) {
+        console.log(moreDetails);
 
-    moreDetails.click(function(evt) {
+        moreDetails.click(function(evt) {
         
-        var parentElement = (evt.target).parentElement;
-        var desc = $(parentElement).children('.more-details').text();
-        var target = $(parentElement).children('.job-description');
+            var parentElement = (evt.target).parentElement;
+            var desc = $(parentElement).children('.more-details').text();
+            var target = $(parentElement).children('p');
 
-        // console.log($(parentElement).children('i'));
+            // console.log($(parentElement).children('i'));
 
-        if (desc === "Show more") {
-            target.slideToggle();
-            $(parentElement).children('.more-details').text("Show less");
-            $(parentElement).children('i').toggleClass('fa-angle-down').addClass('fa-angle-up');
-        } else {
-            target.slideToggle();
-            $(parentElement).children('.more-details').text("Show more");
-            $(parentElement).children('i').toggleClass('fa-angle-up').addClass('fa-angle-down');
-        }
-    });
+            if (desc === "Show more") {
+                target.slideToggle();
+                $(parentElement).children('.more-details').text("Show less");
+                $(parentElement).children('i').toggleClass('fa-angle-down').addClass('fa-angle-up');
+            } else {
+                target.slideToggle();
+                $(parentElement).children('.more-details').text("Show more");
+                $(parentElement).children('i').toggleClass('fa-angle-up').addClass('fa-angle-down');
+            }
+        });
+
+    };
+
+    displayMoreDetails(jobMoreDetails);
+    displayMoreDetails(projectMoreDetails);
 
 });

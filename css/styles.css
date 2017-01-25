@@ -188,16 +188,18 @@ progress::-moz-progress-value {
 
 .section-heading {
 	font-size: 2em;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 0.03em;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-left: 5px;
-	margin-bottom: 10px;
 }
 
 #section-container .section-heading {
 	background-color: #222;
 	color: #fff;
 	border-radius: 5px;
+	margin-bottom: 10px;
 }
 
 #work-experience {
@@ -218,6 +220,8 @@ article {
 
 .article-heading {
 	font-size: 1.5em;
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 0.03em;
 	padding: 5px 0;
 }
 
@@ -273,13 +277,13 @@ article {
 	padding-bottom: 10px;
 	background-color: #fff;
 	box-shadow: 5px 5px 10px;
-	flex-direction: row;
+	/*flex-direction: row;*/
 }
 
 .projects-article {
 	width: 100%;
-	flex-direction: column;
-	text-align: center;
+	/*flex-direction: column;*/
+	/*text-align: center;*/
 }
 
 .project-duration {
@@ -294,7 +298,7 @@ article {
 .image-wrapper {
 	max-width: 250px;
 	max-height: 150px;
-	margin: 1em auto;
+	margin: 1em 0;
 }
 
 .image-container {
@@ -316,7 +320,7 @@ article {
 	padding-bottom: 5px;
 	font-size: 1.4em;
 	line-height: 1.5;
-	text-align: justify;
+	/*text-align: justify;*/
 }
 
 /* Code for the "Education" section starts here */
@@ -340,6 +344,8 @@ article {
 
 .sub-section-heading {
 	font-size: 1.7em;
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 0.03em;
 	padding: 5px 0;
 	border-bottom: 1px solid black;
 }
@@ -569,7 +575,7 @@ footer a {
 
 @media screen and (min-width: 650px) {
 	.projects-article {
-		width: 50%;
+		/*width: 50%;*/
 	}
 }
 /* ------------------------------------------------------------------- */

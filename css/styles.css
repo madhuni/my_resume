@@ -104,8 +104,10 @@ figure img {
 .resume-title {
 	text-align: center;
 	font-size: 2.5em;
+	font-family: 'Lora', serif;
+	letter-spacing: 0.03em;
 	color: white;
-	padding: 5px;
+	padding: 10px;
 	background-color: #222;
 	border-radius: 5px;
 	margin-bottom: 5px;
@@ -188,6 +190,7 @@ progress::-moz-progress-value {
 
 .section-heading {
 	font-size: 2em;
+	font-weight: 600;
 	font-family: 'Raleway', sans-serif;
 	letter-spacing: 0.03em;
 	padding-top: 5px;

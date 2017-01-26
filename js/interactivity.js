@@ -6,7 +6,7 @@ $(function($) {
         var tapTarget = parent.children('.section-heading');
         var toggleTarget = parent.children('article');
         var toggleTarget2 = parent.find('.sub-section');
-        var hrRule = parent.children('hr');
+        var hrRule = parent.find('hr');
 
         tapTarget.click(function(evt) {
             toggleTarget.slideToggle();

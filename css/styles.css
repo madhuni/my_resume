@@ -66,6 +66,7 @@ i {
 .more-details {
 	padding: 5px 0;
 	font-size: 1.2em;
+	color: blue;
 }
 
 .more-details:hover {
@@ -120,6 +121,10 @@ hr {
 /* Rules for the section-heading starts here */
 #bio-container section {
 	margin-bottom: 5px;
+}
+
+#bio-container hr {
+	margin-top: 0;
 }
 
 /* Rules for the "details" elements with child elements starts here*/
@@ -223,14 +228,14 @@ article {
 .article-heading {
 	font-size: 1.5em;
 	font-family: 'Roboto', sans-serif;
-	letter-spacing: 0.03em;
+	/*letter-spacing: 0.03em;*/
 	padding: 5px 0;
 }
 
 .up-down {
 	font-size: 1.2em;
 	padding-right: 5px;
-	font-weight: bold;
+	font-weight: 900;
 }
 
 .up-down:hover {
@@ -545,6 +550,13 @@ footer a {
 
 	#skills .details img {
 		margin: auto;
+	}
+
+	#work-experience article,
+	#projects article,
+	#educaiton .sub-section,
+	#section-container hr {
+		display: none;
 	}
 }
 

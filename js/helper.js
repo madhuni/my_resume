@@ -24,7 +24,7 @@ var HTMLlangContent = '<span>%data%</span><progress value="%cur-value%" max="100
 // we will keep the "#work-experience" section in the HTML.
 // Section heading will also be there in the HTML.
 var HTMLworkArticle = '<article class="work-article container"><div class="job-items flex-box"></div></article>';
-var HTMLjobDescription = '<i class="fa fa-angle-down up-down"></i><span class="more-details">Show more</span><p class="job-description hidden">%data%</p>';
+var HTMLjobDescription = '<p class="job-description hidden">%data%</p><i class="fa fa-angle-down up-down"></i><span class="more-details">Show more</span>';
 var HTMLcompanyLogo = '<div class="company-logo"><img src="%data%" alt="Company Logo" width="45" height="45"></div>';
 var HTMLjobDescItems = '<div class="job-desc-items"></div>';
 var HTMLcompany = '<h4 class="article-heading">%data%</h4>';
@@ -39,7 +39,7 @@ var HTMLprojectArticle = '<article class="projects-article container"></article>
 var HTMLprojectArticleHeading = '<h4 class="article-heading">%data%</h4>';
 var HTMLprojectDuration = '<div class="project-duration"><i class="fa fa-calendar"></i><time>%data%</time></div>';
 var HTMLimageContainer = '<div class="image-wrapper"><div class="image-container"><img src="%data%" alt="Project Image"></div></div>';
-var HTMLprojectDescription = '<i class="fa fa-angle-down up-down"></i><span class="more-details">Show more</span><p class="project-description hidden">%data%</p>';
+var HTMLprojectDescription = '<p class="project-description hidden">%data%</p><i class="fa fa-angle-down up-down"></i><span class="more-details">Show more</span>';
 
 /* Helper contect for the education sections starts here */
 // we will keep both the "#online-education" and "#academic-education" in the HTML.

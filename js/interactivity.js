@@ -1,43 +1,60 @@
-/* executing the script on loading of the complete dom */
-/* similar way we can pass the call back function in the jQuery object
-    
-    $(function() {
-        --do something here--
-    });
-
-    or we can use this:
-
-    $(document).ready(function() {
-        --do something here--
-    });
-    
-*/
-
 $(function($) {
-
+    
     /* Creating function for toggling the sections in the section-container */
     function toggleSections(parent) {
 
         var tapTarget = parent.children('.section-heading');
         var toggleTarget = parent.children('article');
+        var toggleTarget2 = parent.find('.sub-section');
         var hrRule = parent.children('hr');
-        
+
         tapTarget.click(function(evt) {
             toggleTarget.slideToggle();
+            toggleTarget2.slideToggle();
             hrRule.slideToggle();
         });
-
     };
-
-    var jobParent = $('#work-experience');
     var projectParent = $('#projects');
-
-
+    var jobParent = $('#work-experience');
+    var eduParent = $('#educaiton');
+    
     // Initializing the function
-    // toggleSections(jobParent);
-    // toggleSections(projectParent);
+    toggleSections(jobParent);
+    toggleSections(projectParent);
+    toggleSections(eduParent);
+    
+    
+    /* Writing code for automatic toggle of the sections below some view-port size */
+    var viewportWidth = $(window).width();
+   // console.log(viewportWidth);
+    
+    /*function checkSize() {
+        
+        var containerWidth = $('main').width(); //numeric value
+        var sectionWidth = $('#section-container').width(); //numaric value
+       // console.log(containerWidth);
+       // console.log(sectionWidth);
+        var jobParent = $('#work-experience');
 
-    /* Creating function for displaying hidden details in the articles */ 
+        if(sectionWidth === containerWidth-20) {
+            console.log("I am in the if section");
+            jobParent.children('.work-article').addClass('hidden');
+            jobParent.children('hr').addClass('hidden');
+            toggleSections(jobParent);
+        } else {
+            console.log("I am in else section");
+            jobParent.children('.work-article').removeClass('hidden');
+            jobParent.children('hr').removeClass('hidden');
+           // stopToggleSection(jobParent);
+        }
+    };
+    
+    checkSize();
+    console.log("rezie funtion is running here");
+    $(window).resize(checkSize);*/
+
+
+/* Creating function for displaying hidden details in the articles */ 
     function displayMoreDetails(moreDetails) {
         // console.log(moreDetails);
 

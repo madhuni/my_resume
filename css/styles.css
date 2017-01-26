@@ -349,6 +349,11 @@ article {
 	box-shadow: 5px 5px 10px;
 }
 
+#educaiton article {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
 .sub-section-heading {
 	font-size: 1.7em;
 	font-family: 'Roboto', sans-serif;

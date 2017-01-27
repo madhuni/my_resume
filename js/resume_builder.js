@@ -6,6 +6,7 @@ var bio = {
         "roleDesc": "Front-End Web Developer",
         "roleLogo": "fa-briefcase"
     },
+    "aboutMe": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
     "profilePicUrl": "./img/my-profile-pic-2.jpg",
     "contactInfo": {
         "contactType": {
@@ -195,6 +196,13 @@ function displayLanguage() {
     }
 };
 
+function displayAboutMe() {
+
+    var formattedAboutMe = HTMLaboutMe.replace('%data%', bio.aboutMe);
+    $("#about-me-section:last").append(formattedAboutMe);
+
+};
+
 function dispalyEducation() {
     // displaying the Online education first
     var eduType1 = education.onlineEducation;
@@ -238,6 +246,7 @@ jQuery(function($) {
     displayContact();
     displaySkills();
     displayLanguage();
+    displayAboutMe();
     work.display();
     featuredProjects.display();
     dispalyEducation();

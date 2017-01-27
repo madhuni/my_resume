@@ -123,7 +123,8 @@ hr {
 	margin-bottom: 5px;
 }
 
-#bio-container hr {
+#bio-container hr,
+#about-me-container hr {
 	margin-top: 0;
 }
 
@@ -191,6 +192,21 @@ progress::-webkit-progress-value {
 progress::-moz-progress-value {
 	background-color: green;
 	border-radius: 2px;
+}
+
+#card-2 {
+	margin: 10px 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #fff;
+	box-shadow: 5px 5px 10px;
+}
+
+.about-me-description {
+	font-size: 1.4em;
+	line-height: 1.5;
+	text-align: left;
+	font-style: italic;
 }
 
 .section-heading {
@@ -556,7 +572,9 @@ footer a {
 	#skills .details img {
 		margin: auto;
 	}
+}
 
+@media screen and (max-width: 650px) {
 	#work-experience article,
 	#projects article,
 	#educaiton .sub-section,

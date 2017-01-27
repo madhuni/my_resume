@@ -32,6 +32,8 @@ var HTMLrole = '<h4 class="article-heading">%data%</h4>';
 var HTMLjobDuration = '<div class="job-duration"><i class="fa  fa-calendar"></i><span class="duration">%data%</span></div>';
 var HTMLjobLocation = '<div class="job-location"><i class="fa fa-map-marker"></i><span class="location-description">%data%</span></div>';
 
+/* Helper contect for the about me section start here */
+var HTMLaboutMe = '<div class="details"><i class="fa fa-quote-left fa-pull-left" aria-hidden="true"></i><p class="about-me-description">%data%</p></div>'
 /* Helper content for the portfolio section starts here */
 // we will keep the "#projects" section in the HTML.
 // Section heading will also be there in the HTML.

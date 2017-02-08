@@ -46,8 +46,8 @@ $(function($) {
         }
     }
 
-    checkSize();
-    $(window).resize(checkSize);
+    // checkSize();
+    // $(window).resize(checkSize);
 
 
 /* Creating function for displaying hidden details in the articles */ 

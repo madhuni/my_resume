@@ -467,12 +467,12 @@ footer a {
 }
 
 /* Media query for the big devices starts here */
-@media screen and (max-width: 420px) {
+/*@media screen and (max-width: 420px) {
 	.company-logo {
 		display: none;
 	}
 
-}
+}*/
 
 @media screen and (min-width: 420px) {
 	.job-items {
@@ -492,7 +492,7 @@ footer a {
 	}
 }
 
-@media screen and (min-width: 551px) and (max-width: 919px) {
+@media screen and (min-width: 551px) and (max-width: 768px) {
 	#bio-container {
 		flex-direction: row;
 	}
@@ -529,7 +529,27 @@ footer a {
 	}	
 }*/
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 769px) and (max-width: 940px){
+	main {
+		max-width: 950px;
+		margin: 0 auto;
+	}
+
+	aside {
+		width: 37%;
+	}
+
+	#section-container {
+		width: 63%;
+		margin-top: 10px;
+	}
+
+	footer {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 941px) {
 	main {
 		max-width: 950px;
 		margin: 0 auto;
@@ -547,10 +567,11 @@ footer a {
 	footer {
 		width: 100%;
 	}
+
 }
 
 /* Hiding the image below the 767px of the viewport size*/
-@media screen and (min-width: 320px) and (max-width: 919px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
 	#card-1 figure {
 		/*display: none;*/
 		margin-left: auto;
@@ -572,16 +593,50 @@ footer a {
 	#skills .details img {
 		margin: auto;
 	}
+
+	/* Rules for the "about-me" section starts here */
+	#about-me-section {
+		text-align: center;
+	}
+
+	.about-me-description {
+		text-align: center;
+	}
+
+	/* Rules for displaying the articles starts here */
+
+	#section-container .section-heading {
+		text-align: center;
+	}
+	
+	.work-article {
+		text-align: center;
+	}
+
+	.job-items {
+		flex-direction: column;
+	}
+
+	.company-logo {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.job-desc-items {
+		width: 100%;
+		margin: 0 auto;
+	}
+	
 }
 
-@media screen and (max-width: 650px) {
+/*@media screen and (max-width: 650px) {
 	#work-experience article,
 	#projects article,
 	#educaiton .sub-section,
 	#section-container hr {
 		display: none;
 	}
-}
+}*/
 
 /* Setting different breakpoints for the 'details' in the skill section */
 @media screen and (min-width: 320px) and (max-width: 400px) {
@@ -601,7 +656,7 @@ footer a {
 	}
 }
 
-@media screen and (min-width: 601px) and (max-width: 919px){
+@media screen and (min-width: 601px) and (max-width: 768px){
 	#skills .details {
 		flex-direction: column;
 		text-align: center;

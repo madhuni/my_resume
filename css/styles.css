@@ -543,7 +543,7 @@ footer a {
 		width: 63%;
 		margin-top: 10px;
 	}
-
+	
 	footer {
 		width: 100%;
 	}
@@ -609,6 +609,12 @@ footer a {
 		text-align: center;
 	}
 	
+	#section-container hr {
+		margin-right: auto;
+		margin-left: auto;
+		width: 70%;
+	}
+
 	.work-article {
 		text-align: center;
 	}
@@ -627,6 +633,23 @@ footer a {
 		margin: 0 auto;
 	}
 	
+	.projects-article {
+		text-align: center;
+	}
+
+	.image-wrapper {
+		margin-right: auto;
+		margin-left: auto; 
+	}
+	
+	.sub-section-heading {
+		text-align: center;
+	}
+
+	.online-edu-article,
+	.academic-edu-article {
+		text-align: center;
+	}
 }
 
 /*@media screen and (max-width: 650px) {

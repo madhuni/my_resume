@@ -572,6 +572,13 @@ footer a {
 
 /* Hiding the image below the 767px of the viewport size*/
 @media screen and (min-width: 320px) and (max-width: 768px) {
+	
+	#card-1 {
+		max-width: 580px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 	#card-1 figure {
 		/*display: none;*/
 		margin-left: auto;
@@ -595,6 +602,12 @@ footer a {
 	}
 
 	/* Rules for the "about-me" section starts here */
+	#card-2 {
+		max-width: 580px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 	#about-me-section {
 		text-align: center;
 	}
@@ -604,6 +617,12 @@ footer a {
 	}
 
 	/* Rules for displaying the articles starts here */
+	
+	#section-container {
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
 	#section-container .section-heading {
 		text-align: center;

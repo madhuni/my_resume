@@ -1,5 +1,4 @@
 /* Making the Bio-obeject for the Resume */
-
 var bio = {
     name: "Kanishka Mohan Madhuni",
     role: "Front-End Web Developer",
@@ -12,7 +11,7 @@ var bio = {
     },
     welcomeMessage: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
     skills: ["HTML-5", "CSS-3", "Javascript", "JQuery", "Bootstrap"],
-    biopic: "./img/my-profile-pic-2.jpg",
+    biopic: "./img/my-profile-pic.jpg",
     extraDetails : {
         contactInfoLogo: ["fa-map-marker", "fa-envelope", "fa-phone", "fa-github-square", "fa-paperclip"],
         skillLogoUrl: ["./img/web-tech-logo/html5.svg",
@@ -39,10 +38,10 @@ bio.display = function () {
 /* Code for desplaying BIO starts here */
 
 function displayTitle() {
-    var formattedTitle = HTMLresumeTitle.replace("%data%", bio.name);
+    var formattedTitle = HTMLresumeTitle.replace("%data1%", bio.name).replace("%data2%", bio.role);
     var formattedPic = HTMLresumePic.replace("%data%", bio.biopic);
-    $("#card-1").prepend(formattedTitle);
-    $("#card-1").prepend(formattedPic);
+    $("#header-wrapper:last").append(formattedPic);
+    $("#header-wrapper:last").append(formattedTitle);
 };
 
 function displayContact() {
@@ -56,7 +55,7 @@ function displayContact() {
         var formattedContactType = contacts[i];
         var formattedContect = HTMLcontactContent.replace("%font-awesome-class%",formattedFaClass).replace("%data%", formattedContactType);
         $("#contact-section:last").append(HTMLcontactContainer);
-        $(".details:last").append(formattedContect);
+        $("#contact-section .details:last").append(formattedContect);
     }
 };
 
@@ -66,7 +65,7 @@ function displaySkills() {
         var skillDesc = bio.skills[i];
         var formattedSkillContent = HTMLskillContent.replace("%logo-image%", logoUrl).replace("%data%", skillDesc);
         $("#skills:last").append(HTMLskillsContainer);
-        $(".details:last").append(formattedSkillContent);
+        $("#skills .details:last").append(formattedSkillContent);
     }
 };
 
@@ -76,7 +75,7 @@ function displayLanguage() {
         var percent = bio.extraDetails.language.langPercent[i];
         var formattedLang = HTMLlangContent.replace("%data%",lang).replace("%cur-value%", percent);
         $("#lang-section:last").append(HTMLlangContainer);
-        $(".details:last").append(formattedLang);
+        $("#lang-section .details:last").append(formattedLang);
     }
 };
 

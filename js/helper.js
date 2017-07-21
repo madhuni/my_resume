@@ -1,6 +1,11 @@
-var HTMLresumePic = '<figure class="flex-box"><img src=%data% alt="Profile Picture"></figure>';
-var HTMLresumeTitle = '<h1 class="resume-title">%data%</h1>';
+var HTMLresumePic = '<div id="img-container">';
+	HTMLresumePic += '<img src=%data% class="img-circle" alt="profile picture" width="100" height="100">';
+	HTMLresumePic += '</div>';
 
+var HTMLresumeTitle = '<div id="name-role-container">';
+	HTMLresumeTitle += '<h1 id="name">%data1%</h1>';
+	HTMLresumeTitle += '<h4 id="role">%data2%</h4>';
+	HTMLresumeTitle += '</div>';
 // we will keep the #bio-container in the HTML file.
 
 /* Variables for the "bio-section" starts here */
@@ -12,7 +17,7 @@ var HTMLcontactContent = '<i class="fa %font-awesome-class%"></i><span>%data%</s
 var HTMLhrRule = '<hr>';
 
 // we will keep the "#skills" section in the HTML file.
-var HTMLskillsContainer = '<div class="details flex-box"></div';
+var HTMLskillsContainer = '<div class="details flex-box"></div>';
 var HTMLskillContent = '<img src="%logo-image%" alt="HTML5 logo" width="25" height="25" class="tech-logo"><span>%data%</span>';
 
 // we will keep the "#lang-section" in the HTML file.

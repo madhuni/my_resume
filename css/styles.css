@@ -73,6 +73,20 @@ i {
 	cursor: pointer;
 }
 
+/* Styling the header  */
+.page-header {
+	margin-top: 0px;
+	padding: 10px 15px;
+	background-color: #222;
+	color: white;
+}
+
+#header-wrapper {
+	max-width: 900px;
+	margin: 0 auto;
+	padding-left: 10px;
+}
+
 /* Coding for the "card-1" starts here */
 #card-1 {
 	margin: 10px 0;

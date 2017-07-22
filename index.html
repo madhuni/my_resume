@@ -1,63 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>My Resume</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="./css/styles.css">
-</head>
-<body>
-	<main class="container flex-box">
-		<aside class="container">
-			<div id="card-1" class="flex-box container">
-				<div id="bio-container" class="container flex-box">
-					<section id="contact-section" class="flex-box">
-						<h2 class="section-heading">Contacts</h2>
-						<hr>
-					</section> <!-- End of "bio-section" -->
-					<section id="skills" class="flex-box">
-						<h2 class="section-heading">Skills</h2>
-						<hr>
-					</section> <!-- End of "skills" section -->
-					<section id="lang-section">
-						<h2 class="section-heading">Language</h2>
-						<hr>
-					</section> <!-- End of "lang-section" -->
-				</div> <!-- End of container -->
-			</div> <!-- End of "card-1" -->
-		</aside>
-		<div id="section-container" class="container">
-			<section id="work-experience" class="container">
-				<h2 class="section-heading"><i class="fa fa-suitcase"></i>Work Experience</h2>
-			</section> <!-- End of the "work-experience" section -->
-			<section id="projects" class="container">
-				<h2 class="section-heading"><i class="fa fa-folder-open"></i>Featured Projects</h2>
-			</section> <!-- End of the "projects" section -->
-			<section id="educaiton" class="container">
-				<h2 class="section-heading"><i class="fa fa-graduation-cap"></i>Education</h2>
-				<section id="online-education" class="container sub-section">
-					<h3 class="sub-section-heading">Online Education</h3>
-				</section>
-				<section id="academic-education" class="container sub-section">
-					<h3 class="sub-section-heading">Academics</h3>
-				</section>
-			</section> <!-- End of the "educaiton" section -->
-		</div>
-		<footer class="container flex-box">
-			<p>Find me on social media</p>
-			<a href="#"><i class="fa fa-google-plus social-icons"></i></a>
-			<a href="#"><i class="fa fa-facebook social-icons"></i></a>
-			<a href="#"><i class="fa fa-twitter social-icons"></i></a>
-			<a href="#"><i class="fa fa-linkedin social-icons"></i></a>
-			<a href="#"><i class="fa fa-github social-icons"></i></a>
-		</footer>
-	</main> <!-- End of "main" -->
 
-	<!-- Scripts have been added into the HTML -->
-	<script src="js/jquery-3.1.1.min.js"></script>
-	<script src="js/helper.js"></script>
-	<script src="js/resume_builder.js"></script>
+<head>
+    <title>My Resume</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <div id="header-wrapper"></div>
+    </header>
+    <main class="container flex-box">
+        <aside class="container">
+            <div id="card-2" class="container">
+                <div id="about-me-container" class="container flex-box">
+                    <section id="about-me-section" class="flex-box">
+                        <h2 class="section-heading">About Me</h2>
+                        <hr>
+                    </section>
+                </div>
+            </div>
+            <!-- End of "card-2" -->
+            <div id="card-1" class="flex-box container">
+                <div id="bio-container" class="container flex-box">
+                    <section id="skills" class="flex-box">
+                        <h2 class="section-heading">Skills</h2>
+                        <hr>
+                    </section>
+                    <!-- End of "skills" section -->
+                    <section id="contact-section" class="flex-box">
+                        <h2 class="section-heading">Contacts</h2>
+                        <hr>
+                    </section>
+                    <!-- End of "bio-section" -->
+                    <section id="lang-section">
+                        <h2 class="section-heading">Language</h2>
+                        <hr>
+                    </section>
+                    <!-- End of "lang-section" -->
+                </div>
+                <!-- End of container -->
+            </div>
+            <!-- End of "card-1" -->
+            <div id="card-3" class="container">
+                <div id="map-container" class="container flex-box">
+                    <section id="map-section" class="flex-box">
+                        <h2 class="section-heading">Places where I lived and worked</h2>
+                        <!-- <div id="map"></div> -->
+                    </section>
+                </div>
+            </div>
+            <!-- End of "card-2" -->
+        </aside>
+        <div id="section-container" class="container">
+            <section id="projects" class="container flex-box">
+                <h2 class="section-heading"><i class="fa fa-folder-open"></i>Featured Projects</h2>
+                <div id="project-wrapper"></div>
+            </section>
+            <!-- End of the "projects" section -->
+            <section id="work-experience" class="container">
+                <h2 class="section-heading"><i class="fa fa-suitcase"></i>Work Experience</h2>
+            </section>
+            <!-- End of the "work-experience" section -->
+            <section id="educaiton" class="container">
+                <h2 class="section-heading"><i class="fa fa-graduation-cap"></i>Education</h2>
+                <section id="online-education" class="container sub-section">
+                    <h3 class="sub-section-heading">Online Education</h3>
+                </section>
+                <section id="academic-education" class="container sub-section">
+                    <h3 class="sub-section-heading">Academics</h3>
+                </section>
+            </section>
+            <!-- End of the "educaiton" section -->
+        </div>
+    </main>
+    <!-- End of "main" -->
+    <footer class="container flex-box">
+        <p>Find me on social media</p>
+        <a href="#"><i class="fa fa-google-plus social-icons"></i></a>
+        <a href="#"><i class="fa fa-twitter social-icons"></i></a>
+        <a href="#"><i class="fa fa-linkedin social-icons"></i></a>
+        <a href="#"><i class="fa fa-github social-icons"></i></a>
+    </footer>
+
+    <!-- Scripts have been added into the HTML -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyA31u0Hxmq37sPOLezIMM8wg0VLJd5E0Sg"></script>
+    <script src="js/helper.js"></script>
+    <script src="js/resume_builder.js"></script>
+    <script src="js/interactivity.js"></script>
 </body>
 </html>

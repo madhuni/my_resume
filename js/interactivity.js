@@ -73,7 +73,7 @@ $(function($) {
             }
         });
 
-    };
+    }
 
     var jobMoreDetails= $('.work-article').children('.more-details');
     var projectMoreDetails = $('.projects-article').children('.more-details');

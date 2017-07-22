@@ -42,7 +42,7 @@ function displayTitle() {
     var formattedPic = HTMLresumePic.replace("%data%", bio.biopic);
     $("#header-wrapper:last").append(formattedPic);
     $("#header-wrapper:last").append(formattedTitle);
-};
+}
 
 function displayContact() {
     var contacts = [];
@@ -57,7 +57,7 @@ function displayContact() {
         $("#contact-section:last").append(HTMLcontactContainer);
         $("#contact-section .details:last").append(formattedContect);
     }
-};
+}
 
 function displaySkills() {
     for (var i=0; i<bio.skills.length; i++) {
@@ -67,7 +67,7 @@ function displaySkills() {
         $("#skills:last").append(HTMLskillsContainer);
         $("#skills .details:last").append(formattedSkillContent);
     }
-};
+}
 
 function displayLanguage() {
     for (var i=0; i<bio.extraDetails.language.langDesc.length; i++) {
@@ -77,12 +77,12 @@ function displayLanguage() {
         $("#lang-section:last").append(HTMLlangContainer);
         $("#lang-section .details:last").append(formattedLang);
     }
-};
+}
 
 function displayAboutMe() {
     var formattedAboutMe = HTMLaboutMe.replace('%data%', bio.welcomeMessage);
     $("#about-me-section:last").append(formattedAboutMe);
-};
+}
 
 /* Work-experience object goes here */
 

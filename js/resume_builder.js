@@ -11,7 +11,7 @@ var bio = {
     },
     welcomeMessage: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
     skills: ["HTML-5", "CSS-3", "Javascript", "JQuery", "Bootstrap"],
-    biopic: "./img/my-profile-pic.jpg",
+    biopic: "./img/profile-pic-1.jpg",
     extraDetails : {
         contactInfoLogo: ["fa-map-marker", "fa-envelope", "fa-phone", "fa-github-square", "fa-paperclip"],
         skillLogoUrl: ["./img/web-tech-logo/html5.svg",
@@ -131,12 +131,22 @@ work.display = function() {
 var projects = [{
     title: "My Portfolio Project",
     dates: "December 2016",
-    description: "This is my portfolio Project. I have used HMTL5 for markup and CSS3 for the styling of the project. The page has been made fully responsive to work across all the devices. Bootstrap is also used to give the interactivity to the page. The CSS Flexbox layout has been used to design the entire layout of the page.",
+    description: "Built with HTML-5, CSS-3, Bootstrap Framework. Fully responsive across all devices",
     images: "http://lorempixel.com/1200/720"
 }, {
     title: "My Interactive Resume",
     dates: "Jan 2016",
-    description: "I have made this iteractive resume to showcase my details on an online plateform. This resume has been built up using HTML5 and CSS3 flex box layout working across all the browsers. JQuery has been used to manipulate the DOM elements and for more features.",
+    description: "Built with HTML-5, CSS-3, Bootstrap Framework. Fully responsive across all devices",
+    images: "http://lorempixel.com/1200/720"
+}, {
+    title: "My Interactive Resume",
+    dates: "Jan 2016",
+    description: "Built with HTML-5, CSS-3, Bootstrap Framework. Fully responsive across all devices",
+    images: "http://lorempixel.com/1200/720"
+}, {
+    title: "My Interactive Resume",
+    dates: "Jan 2016",
+    description: "Built with HTML-5, CSS-3, Bootstrap Framework. Fully responsive across all devices",
     images: "http://lorempixel.com/1200/720"
 }];
 
@@ -153,14 +163,14 @@ projects.display = function() {
         var formattedDescription = HTMLprojectDescription.replace("%data%", items[i].description);
         
         
-        $("#projects:last").append(HTMLprojectArticle);
+        $("#project-wrapper:last").append(HTMLprojectArticle);
         $(".projects-article:last").append(formattedArticleHeading).append(formattedDuration).append(formattedImageSrc).append(formattedDescription);
     }
 
-    $("<hr>").insertAfter(".projects-article"); // adding <hr> at the end of each article
+    // $("<hr>").insertAfter(".projects-article"); // adding <hr> at the end of each article
 
-    var lastChild = $("hr:last-child"); // selecting the <hr> tag which is the last-element of its parent i.e. "#projects"
-    $(lastChild).remove(); // then removing that last <hr> tag from the HTML.
+    // var lastChild = $("hr:last-child"); // selecting the <hr> tag which is the last-element of its parent i.e. "#projects"
+    // $(lastChild).remove(); // then removing that last <hr> tag from the HTML.
 };
 
 /* Obeject for the Education Goes Here */
@@ -172,7 +182,7 @@ var education = {
         degree: "B.Tech.",
         majors: "Mechanical Engineering",
         dates: "2010-2014"
-    }, {
+    }/*, {
         name: "Chitragupt Inter College",
         location: "Moradabad, Uttar Pradesh",
         degree: "Intermediate",
@@ -184,7 +194,7 @@ var education = {
         degree: "Highschool",
         majors: "Physics, Chemistry, Maths",
         dates: "2006-2007"
-    }],
+    }*/],
     onlineCourses: [{
         title: "Front End Development Nanodegree",
         school: "Udacity",

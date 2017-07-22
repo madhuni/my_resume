@@ -80,6 +80,6 @@ $(function($) {
 
     // Initializing the function
     displayMoreDetails(jobMoreDetails);
-    displayMoreDetails(projectMoreDetails);
+    // displayMoreDetails(projectMoreDetails);
 
 });

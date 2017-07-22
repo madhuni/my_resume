@@ -5,9 +5,9 @@ var bio = {
     contacts: {
         location: "Bangalore, India",
         email: "kmmadhuni@gmail.com",
-        mobile: "+91-8954054974",
-        github: "https://github.com/madhuni/",
-        portfolio: "https://madhuni.github.io/"
+        mobile: "+91-XXXXXXXXXX",
+        github: "https://github.com/madhuni",
+        portfolio: "https://madhuni.github.io"
     },
     welcomeMessage: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
     skills: ["HTML-5", "CSS-3", "Javascript", "JQuery", "Bootstrap"],
@@ -90,7 +90,7 @@ var work = {
     jobs: [{
         employer: "Cognizant Technology Solutions",
         title: "Application Analyst",
-        locaiton: "Chennai/Bangalore",
+        location: "Bangalore",
         dates: "April 2015 - Present",
         description: "I have worked as a Application Analyst in the EDI. EDI which stands for Electronic Data Interchange is a third party team which the client use to exchange the different kind of files in different formates to their business partners. I had to moinitor the applicaton so that the flow of flies will remain fine and do the automation for cutting down the time in day to day operations.",
         companyLogo: "./img/cognizant_logo.png",
@@ -108,10 +108,10 @@ work.display = function() {
         var formattedCompany = HTMLcompany.replace("%data%",jobItems[i].employer);
         var formattedRole = HTMLrole.replace("%data%", jobItems[i].title);
         var formattedJobDates = HTMLjobDuration.replace("%data%", jobItems[i].dates);
-        var formattedJobLocation = HTMLjobLocation.replace("%data%", jobItems[i].locaiton);
+        var formattedJobLocation = HTMLjobLocation.replace("%data%", jobItems[i].location);
         
         $("#work-experience:last").append(HTMLworkArticle);
-        $(".work-article:last").append(formattedDescription)
+        $(".work-article:last").append(formattedDescription);
         $(".job-items:last").append(formattedCompanyLogo);
         $(".job-items:last").append(HTMLjobDescItems);
         $(".job-desc-items:last").append(formattedRole);
@@ -127,27 +127,21 @@ work.display = function() {
 
 /* Featured Project Obeject Goes Here */
 
-
 var projects = [{
     title: "My Portfolio Project",
     dates: "December 2016",
     description: "Built with HTML-5, CSS-3, Bootstrap Framework. Fully responsive across all devices",
-    images: "http://lorempixel.com/1200/720"
+    images: "http://www.zealopers.com/wp-content/uploads/2015/05/web-development-450x300.png"
 }, {
     title: "My Interactive Resume",
     dates: "Jan 2016",
     description: "Built with HTML-5, CSS-3, Bootstrap Framework. Fully responsive across all devices",
-    images: "http://lorempixel.com/1200/720"
+    images: "http://www.zealopers.com/wp-content/uploads/2015/05/web-development-450x300.png"
 }, {
     title: "My Interactive Resume",
     dates: "Jan 2016",
     description: "Built with HTML-5, CSS-3, Bootstrap Framework. Fully responsive across all devices",
-    images: "http://lorempixel.com/1200/720"
-}, {
-    title: "My Interactive Resume",
-    dates: "Jan 2016",
-    description: "Built with HTML-5, CSS-3, Bootstrap Framework. Fully responsive across all devices",
-    images: "http://lorempixel.com/1200/720"
+    images: "http://www.zealopers.com/wp-content/uploads/2015/05/web-development-450x300.png"
 }];
 
 
@@ -166,14 +160,9 @@ projects.display = function() {
         $("#project-wrapper:last").append(HTMLprojectArticle);
         $(".projects-article:last").append(formattedArticleHeading).append(formattedDuration).append(formattedImageSrc).append(formattedDescription);
     }
-
-    // $("<hr>").insertAfter(".projects-article"); // adding <hr> at the end of each article
-
-    // var lastChild = $("hr:last-child"); // selecting the <hr> tag which is the last-element of its parent i.e. "#projects"
-    // $(lastChild).remove(); // then removing that last <hr> tag from the HTML.
 };
 
-/* Obeject for the Education Goes Here */
+/* Object for the Education Goes Here */
 
 var education = {
     schools: [{
@@ -210,7 +199,6 @@ education.display = function () {
     
     $.each(eduType1, function(index, value) {
         var formattedArticleHeading = HTMLarticleHeading1.replace("%data%",eduType1[index].school);
-        /*console.log(formattedArticleHeading);*/
         var formattedEduDuration = HTMLeduDuration1.replace("%data%", eduType1[index].dates);
         var formattedMajor = HTMLmajor1.replace("%data%", eduType1[index].title);
         
@@ -240,10 +228,11 @@ education.display = function () {
     $(lastChild).remove();
 };
 
-//here we are using the "failsafe" jQuery
+//here we are using the "failsafe" jQuery to initilaize all the functions
 jQuery(function($) {
     bio.display();
     work.display();
     projects.display();
     education.display();
+    $("#map-section:last").append(googleMap);
 });

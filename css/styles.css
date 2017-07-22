@@ -1,22 +1,22 @@
 * {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
-	font-size: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 10px;
 }
 
 .flex-box {
-	display: -moz-flex;
-	display: -webkit-flex;
-	display: -ms-flex;
-	display: flex;
-	flex-wrap: wrap;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .container {
-	padding-right: 1em;
-	padding-left: 1em;
+    padding-right: 1em;
+    padding-left: 1em;
 }
 
 main,
@@ -31,8 +31,8 @@ h3,
 h4,
 p,
 hr {
-	width: 100%;
-	margin: 0;
+    width: 100%;
+    margin: 0;
 }
 
 h1,
@@ -43,781 +43,675 @@ h5,
 h6,
 p,
 hr {
-	margin: 0;
+    margin: 0;
 }
 
 main {
-	flex-direction: row;
-	background-color: #f5f5f5;
+    flex-direction: row;
+    background-color: #f5f5f5;
 }
 
 body {
- background-color: #f5f5f5;
+    background-color: #f5f5f5;
 }
 
 .hidden {
-	display: none;
+    display: none;
 }
 
 i {
-	padding-right: 10px;
+    padding-right: 10px;
 }
 
 .more-details {
-	padding: 5px 0;
-	font-size: 1.2em;
-	color: blue;
+    padding: 5px 0;
+    font-size: 1.2em;
+    color: blue;
 }
 
 .more-details:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 /* Styling the header  */
 .page-header {
-	margin-top: 0px;
-	padding: 10px 15px;
-	background-color: #222;
-	color: white;
+    margin-top: 0px;
+    padding: 10px 15px;
+    background-color: #222;
+    color: white;
 }
 
 #header-wrapper {
-	display: flex;
-	max-width: 900px;
-	margin: 0 auto;
-	padding: 10px;
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 #img-container,
 #name-role-container {
-	display: inline-block;
+    display: inline-block;
 }
 
 #img-container {
-	width: 100px;
-	height: 100px;
-	max-width: 100px;
-	max-height: 100px;
-	margin: auto auto;
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    margin: auto auto;
 }
 
 #img-container img {
-	border-radius: 20px;
-	width: 100%;
-	height: 100%
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
 }
 
 #name-role-container {
-	width: 80%;
-	padding: 0 10px 0 20px;
+    width: 80%;
+    padding: 0 10px 0 20px;
 }
 
 #name {
-	font-size: 30px;
-	margin-bottom: 10px;
+    font-size: 30px;
+    margin-bottom: 10px;
 }
 
 #role {
-	font-size: 15px;
+    font-size: 15px;
 }
 
 /* Coding for the "card-1" starts here */
 #card-1 {
-	margin: 10px 0;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	background-color: #fff;
-	box-shadow: 5px 5px 10px;
-}
-/*
-#card-1 figure {
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: center;
-	height: auto;
-	max-width: 320px;
-	overflow: hidden;
-	margin-bottom: 10px;
+    margin: 10px 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px;
 }
 
-figure img {
-	display: block;
-	width: 100%;
-	height: auto;
-	border: 0.2em solid black;
-	border-radius: 10px;
-	vertical-align: middle;
-}
-*/
 /* Rules for the title */
 .resume-title {
-	text-align: center;
-	font-size: 2.5em;
-	font-family: 'Lora', serif;
-	letter-spacing: 0.03em;
-	color: white;
-	padding: 10px;
-	background-color: #222;
-	border-radius: 5px;
-	margin-bottom: 5px;
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'Lora', serif;
+    letter-spacing: 0.03em;
+    color: white;
+    padding: 10px;
+    background-color: #222;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
 
 hr {
-	margin: 0.5em 0;
+    margin-bottom: 0.5em;
 }
 
 /* Rules for the section-heading starts here */
 #bio-container section {
-	margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 #bio-container hr,
 #about-me-container hr {
-	margin-top: 0;
+    margin-top: 0;
 }
 
 /* Rules for the "details" elements with child elements starts here*/
 .details {
-	padding: 5px 5px;
+    padding: 5px 5px;
 }
 
 .details i {
-	font-size: 1.4em;
+    font-size: 1.4em;
 }
 
 .details span {
-	font-size: 1.4em;
-	padding: 5px 0;
+    font-size: 1.4em;
+    padding: 5px 0;
 }
 
 /* Rules for the details segment in the "skills" section */
 
 #skills .details {
-	flex-direction: row;
+    flex-direction: row;
 }
 
 .tech-logo {
-	margin-right: 10px;
+    margin-right: 10px;
 }
 
 /*Code for the progress-bar starts here */
 progress {
-	-webkit-appearance: progress-bar;
-	-moz-appearance: progress-bar;
-	-ms-appearance: progress-bar;
-	appearance: progress-bar;
-	display: block;
-	width: 80%;
-	height: 15px;
-	margin: 5px 0;
-	border-radius: 2px;
-	border: 0;
+    -webkit-appearance: progress-bar;
+    -moz-appearance: progress-bar;
+    -ms-appearance: progress-bar;
+    appearance: progress-bar;
+    display: block;
+    width: 80%;
+    height: 15px;
+    margin: 5px 0;
+    border-radius: 2px;
+    border: 0;
 }
 
 progress::-webkit-progress-bar {
-	background-color: #eee;
-	border-radius: 2px;
-	box-shadow: 0 2px 5px #222;
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px #222;
 }
 
 progress::-moz-progress-bar {
-	background-color: #008000;
-	border-radius: 2px;
-	box-shadow: 0 2px 5px #222;
+    background-color: #008000;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px #222;
 }
 
 progress::-ms-progress-bar {
-	background-color: #eee;
-	border-radius: 2px;
-	box-shadow: 0 2px 5px #222;
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px #222;
 }
 
 progress::-webkit-progress-value {
-	background-color: green;
-	border-radius: 2px;
+    background-color: green;
+    border-radius: 2px;
 }
 
 progress::-moz-progress-value {
-	background-color: green;
-	border-radius: 2px;
+    background-color: green;
+    border-radius: 2px;
 }
 
-#card-2 {
-	margin: 10px 0;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	background-color: #fff;
-	box-shadow: 5px 5px 10px;
+#card-2, #card-3 {
+    margin: 10px 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px;
+}
+
+#map-section {
+    height: calc(100% - 50px);
+}
+
+#map {
+    display: block;
+    height: 250px;
+    width: 100%;
 }
 
 .about-me-description {
-	font-size: 1.4em;
-	line-height: 1.5;
-	text-align: left;
-	font-style: italic;
+    font-size: 1.4em;
+    line-height: 1.5;
+    text-align: left;
+    font-style: italic;
 }
 
 .section-heading {
-	font-size: 2em;
-	font-weight: 600;
-	font-family: 'Raleway', sans-serif;
-	letter-spacing: 0.03em;
-	padding: 5px;
+    font-size: 2em;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.03em;
+    padding: 5px;
 }
 
 #section-container .section-heading {
-	background-color: #222;
-	color: #fff;
-	border-radius: 5px;
-	margin-bottom: 10px;
-	padding: 10px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
 #work-experience {
-	margin: 0 0 1em;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	background-color: #fff;
-	box-shadow: 5px 5px 10px;
+    margin: 0 0 1em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px;
 }
 
 /* Code for the "article" starts here */
 
 article {
-	padding-top: 5px;
-	padding-bottom: 5px;
-	margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .article-heading {
-	font-size: 1.5em;
-	font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
 	/*letter-spacing: 0.03em;*/
-	padding: 5px 0;
+    padding: 5px 0;
 }
 
 .up-down {
-	font-size: 1.2em;
-	padding-right: 5px;
-	font-weight: 900;
+    font-size: 1.2em;
+    padding-right: 5px;
+    font-weight: 900;
 }
 
 .up-down:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .job-items {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .job-duration {
-	padding: 5px 0;
-	margin-right: 5px;
+    padding: 5px 0;
+    margin-right: 5px;
 }
 
 .job-duration i {
-	font-size: 1.4em;
+    font-size: 1.4em;
 }
 
 .duration {
-	font-size: 1.4em;
+    font-size: 1.4em;
 }
 
 .job-location {
-	padding: 5px 0;
+    padding: 5px 0;
 }
 
 .job-location i {
-	font-size: 1.4em;
+    font-size: 1.4em;
 }
 
 .location-description {
-	font-size: 1.4em;
+    font-size: 1.4em;
 }
 
 .job-description {
-	padding: 5px 5px;
-	font-size: 1.4em;
-	line-height: 1.5;
+    padding: 5px 5px;
+    font-size: 1.4em;
+    line-height: 1.5;
 }
 
 .company-logo {
-	padding: 5px;
+    padding: 5px;
 }
 
 .job-desc-items {
-	padding-left: 10px;
+    padding-left: 10px;
 }
 
 /* Code for the "project" sections starts here */
 #projects {
-	margin: 0 0 1em;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	background-color: #fff;
-	box-shadow: 5px 5px 10px;
-	/*flex-direction: row;*/
+    margin: 0 0 1em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px;
+	/*flex-direction: row;*/;
 }
 
 #project-wrapper {
-	overflow-x: auto;
+    overflow-x: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 }
 
 .projects-article {
-	width: 250px;
+    width: 250px;
     display: inline-block;
     flex: 0 0 auto;
     text-align: center;
-    /*margin: 0 15px 10px 0;*/
     border: 1px solid gray;
     border-radius: 10px;
     margin-right: 10px;
-    /*box-shadow: 2px 2px 5px;*/
-	/*flex-direction: column;*/
-	/*text-align: center;*/
 }
 
 .project-duration {
-	padding: 5px 0;
+    padding: 5px 0;
 }
 
 .project-duration i, 
 .project-duration time {
-	font-size: 1.4em;
+    font-size: 1.4em;
 }
 
 .image-wrapper {
-	max-width: 250px;
-	max-height: 150px;
-	margin: 10px auto;
+    max-width: 250px;
+    max-height: 150px;
+    margin: 10px auto;
 }
 
 .image-container {
-	padding-bottom: 60%;
-	position: relative;
+    padding-bottom: 60%;
+    position: relative;
+    border: 1px solid #d3d1d1;
 }
+
 .image-container img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	border: 1px transparent;
-	border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px transparent;
+    border-radius: 15px;
 }
 
 .project-description {
-	padding-top: 5px;
-	padding-bottom: 5px;
-	font-size: 1.4em;
-	line-height: 1.5;
-	display: block;
-	/*text-align: justify;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.4em;
+    line-height: 1.5;
+    display: block;
+    text-align: justify;
 }
 
 /* Code for the "Education" section starts here */
 
 #online-education article,
 #academic-education article {
-	padding-top: 0;
+    padding-top: 0;
 }
 
 .sub-section {
-	padding-top: 10px;
+    padding-top: 10px;
 }
 
 #educaiton {
-	margin: 0 0 1em;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	background-color: #fff;
-	box-shadow: 5px 5px 10px;
+    margin: 0 0 1em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px;
 }
 
 #educaiton article {
-	margin-bottom: 0;
-	padding-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .sub-section-heading {
-	font-size: 1.7em;
-	font-family: 'Roboto', sans-serif;
-	letter-spacing: 0.03em;
-	padding: 5px 0;
-	border-bottom: 1px solid black;
+    font-size: 1.7em;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.03em;
+    padding: 5px 0;
+    border-bottom: 1px solid black;
 }
 
 .edu-duration {
-	padding: 5px 0;
+    padding: 5px 0;
 }
 
 .edu-duration i,
 .edu-duration time {
-	font-size: 1.4em;
+    font-size: 1.4em;
 }
 
 .edu-location {
-	padding: 5px 0;
+    padding: 5px 0;
 }
 
 .edu-location i {
-	font-size: 1.4em;
+    font-size: 1.4em;
 }
 
 .major {
-	margin: 5px 0;
-	line-height: 1.5;
+    margin: 5px 0;
+    line-height: 1.5;
 }
 
 .major .course,
 .major .course-desc,
 .major .major-head,
 .major .major-desc {
-	font-size: 1.4em;
+    font-size: 1.4em;
 }
 
 /* Rules for the footer starts here */
 footer {
-	flex-direction: row;
-	justify-content: center;
-	margin-top: 20px;
-	background-color: #222;
-	padding-bottom: 10px;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: #222;
+    padding-bottom: 10px;
 }
 
 footer p {
-	text-align: center;
-	padding: 10px;
-	font-size: 1.4em;
-	font-weight: bold;
-	color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: white;
 }
 
 footer a {
-	text-decoration: none;
-	color: black;
+    text-decoration: none;
+    color: black;
 }
 
 .social-icons {
-	font-size: 2em;
-	padding: 0 10px;
+    font-size: 2em;
+    padding: 0 10px;
 }
 
 .social-icons:hover {
-	position: relative;
-	bottom: 3px;
+    position: relative;
+    bottom: 3px;
 }
 
 /* Fontawesome fonts color starts here */
 
 /* Social media icons */
 .fa-google-plus {
-	color: #f34a38;
+    color: #f34a38;
 }
 
 .fa-facebook {
-	color: white;
+    color: white;
 }
 
 .fa-twitter {
-  color: #76a9ea;
+    color: #76a9ea;
 }
 
 .fa-linkedin {
-	color: #0077b7;
+    color: #0077b7;
 }
 
 .fa-github {
-	color: #fff;
+    color: #fff;
 }
 
 .fa-map-marker {
-	color: red;
+    color: red;
 }
 
-/* Media query for the big devices starts here */
-/*@media screen and (max-width: 420px) {
-	.company-logo {
-		display: none;
-	}
-
-}*/
-
 @media screen and (min-width: 420px) {
-	.job-items {
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: left;
-	}
+    .job-items {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
 
-	.company-logo {
-		padding: 5px 5px;
-		width: 55px;
-	}
+    .company-logo {
+        padding: 5px 5px;
+        width: 55px;
+    }
 
-	.job-desc-items {
-		padding-left: 10px;
-		width: 80%;
-	}
+    .job-desc-items {
+        padding-left: 10px;
+        width: 80%;
+    };
 }
 
 @media screen and (min-width: 551px) and (max-width: 768px) {
-	#bio-container {
-		flex-direction: row;
-	}
-	
-	#contact-section,
+    #bio-container {
+        flex-direction: row;
+    }
+
+    #contact-section,
 	#lang-section {
-		width: 50%;
-	}
+        width: 50%;
+    }
 
-	#contact-section {
-		order: -2;
-	}
+    #contact-section {
+        order: -2;
+    }
 
-	#lang-section {
-		order: -1;
-	}
+    #lang-section {
+        order: -1;
+    }
 
-	#contact-section hr,
+    #contact-section hr,
 	#lang-section hr {
-		width: 90%;
-	}
-
+        width: 90%;
+    };
 }
 
-/*@media screen and (min-width: 651px) and (max-width: 919px;) {
-	#bio-container {
-		flex-direction: row;
-	}
+@media screen and (min-width: 769px) and (max-width: 940px) {
+    main {
+        max-width: 950px;
+        margin: 0 auto;
+    }
 
-	#contact-section,
-	#skills,
-	#lang-section {
-		width: 33.33%;
-	}	
-}*/
+    aside {
+        width: 37%;
+    }
 
-@media screen and (min-width: 769px) and (max-width: 940px){
-	main {
-		max-width: 950px;
-		margin: 0 auto;
-	}
+    #section-container {
+        width: 63%;
+        margin-top: 10px;
+    }
 
-	aside {
-		width: 37%;
-	}
-
-	#section-container {
-		width: 63%;
-		margin-top: 10px;
-	}
-	
-	footer {
-		width: 100%;
-	}
+    footer {
+        width: 100%;
+    };
 }
 
 @media screen and (min-width: 941px) {
-	main {
-		max-width: 950px;
-		margin: 0 auto;
-	}
+    main {
+        max-width: 950px;
+        margin: 0 auto;
+    }
 
-	aside {
-		width: 30%;
-	}
+    aside {
+        width: 30%;
+    }
 
-	#section-container {
-		width: 70%;
-		margin-top: 10px;
-	}
+    #section-container {
+        width: 70%;
+        margin-top: 10px;
+    }
 
-	footer {
-		width: 100%;
-	}
-
+    footer {
+        width: 100%;
+    };
 }
 
 @media screen and (max-width: 768px) {
-	.container {
-	    padding-right: 0.5em;
-	    padding-left: 0.5em;
-	}
+    .container {
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+    }
 
-	#header-wrapper {
-		display: block;
-	}
+    #header-wrapper {
+        display: block;
+    }
 
-	#img-container,
+    #img-container,
 	#name-role-container {
-		display: block;
-	}
+        display: block;
+    }
 
-	#img-container {
-		width: 100%;
-		text-align: center;
-		margin-bottom: 10px;
-	}
+    #img-container {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
 
-	#name-role-container {
-		width: 100%;
-		text-align: center;
-	}
+    #name-role-container {
+        width: 100%;
+        text-align: center;
+    };
 }
 
 /* Hiding the image below the 767px of the viewport size*/
 @media screen and (min-width: 320px) and (max-width: 768px) {
-	#card-1 {
-		max-width: 580px;
-		margin-left: auto;
-		margin-right: auto;
-	}
+    #card-1 {
+        max-width: 580px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-	#card-1 figure {
+    #card-1 figure {
 		/*display: none;*/
-		margin-left: auto;
-		margin-right: auto;
-	}
+        margin-left: auto;
+        margin-right: auto;
+    }
 		
 	/* Rules for the sectons in the card-1 starts here */
 	
-	#skills {
-		flex-direction: row;
-		/*justify-content: center;*/
-	}
+    #skills {
+        flex-direction: row;
+		/*justify-content: center;*/;
+    }
 
-	#skills .details img,
+    #skills .details img,
 	#skills .details span {
-		display: block;
-	}
+        display: block;
+    }
 
-	#skills .details img {
-		margin: auto;
-	}
+    #skills .details img {
+        margin: auto;
+    }
 
 	/* Rules for the "about-me" section starts here */
-	#card-2 {
-		max-width: 580px;
-		margin-left: auto;
-		margin-right: auto;
-	}
+    #card-2, #card-3 {
+        max-width: 580px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-	/*#about-me-section {
-		text-align: center;
-	}*/
+    #section-container {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-	/*.about-me-description {
-		text-align: center;
-	}*/
+    .company-logo {
+        width: 55px;
+    }
 
-	/* Rules for displaying the articles starts here */
-	
-	#section-container {
-		max-width: 600px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	/*#section-container .section-heading {
-		text-align: center;
-	}
-	*/
-	#section-container hr {
-		/*margin-right: auto;*/
-		/*margin-left: auto;*/
-		/*width: 70%;*/
-	}
-
-	/*.work-article {
-		text-align: center;
-	}*/
-
-	/*.job-items {
-		flex-direction: column;
-	}*/
-
-	.company-logo {
-		width: 55px;
-		/*margin: 0 auto;*/
-	}
-
-	.job-desc-items {
-		width: 80%;
-		padding-left: 8px;
-		/*margin: 0 auto;*/
-	}
-	
-	/*.projects-article {
-		text-align: center;
-	}*/
-
-	.image-wrapper {
-		/*margin-right: auto;*/
-		/*margin-left: auto; */
-	}
-	
-	/*.sub-section-heading {
-		text-align: center;
-	}
-
-	.online-edu-article,
-	.academic-edu-article {
-		text-align: center;
-	}*/
+    .job-desc-items {
+        width: 80%;
+        padding-left: 8px;
+    };
 }
-
-/*@media screen and (max-width: 650px) {
-	#work-experience article,
-	#projects article,
-	#educaiton .sub-section,
-	#section-container hr {
-		display: none;
-	}
-}*/
 
 /* Setting different breakpoints for the 'details' in the skill section */
 @media screen and (min-width: 320px) and (max-width: 400px) {
-	#skills .details {
-		flex-direction: column;
-		text-align: center;
-		width: 30%;
-	}
+    #skills .details {
+        flex-direction: column;
+        text-align: center;
+        width: 30%;
+    };
 }
 
-@media screen and (min-width: 401px) and (max-width: 600px){
-	#skills .details {
-		flex-direction: column;
-		text-align: center;
-		width: 20%;
-		max-width: 80px;
-	}
+@media screen and (min-width: 401px) and (max-width: 600px) {
+    #skills .details {
+        flex-direction: column;
+        text-align: center;
+        width: 20%;
+        max-width: 80px;
+    };
 }
 
-@media screen and (min-width: 601px) and (max-width: 768px){
-	#skills .details {
-		flex-direction: column;
-		text-align: center;
-		width: 15%;
-		max-width: 80px;
-	}
+@media screen and (min-width: 601px) and (max-width: 768px) {
+    #skills .details {
+        flex-direction: column;
+        text-align: center;
+        width: 15%;
+        max-width: 80px;
+    };
 }
-
-@media screen and (min-width: 650px) {
-	.projects-article {
-		/*width: 50%;*/
-	}
-}
-/* ------------------------------------------------------------------- */
-
-/*@media screen and (min-width: 768px) {
-	.resume-title {
-		background-color: #fff;
-		color: black;
-		border-bottom: 1px solid black;
-		border-radius: 0;
-	}
-}*/

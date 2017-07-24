@@ -63,6 +63,13 @@ var HTMLeduDuration2 = '<div class="edu-duration"><i class="fa fa-calendar"></i>
 var HTMLeduLocation = '<div class="edu-location"><i class="fa fa-map-marker"></i><span class="location-description">%data%</span></div>';
 var HTMLmajor2 = '<p class="major"><span class="major-head">Major: </span><span class="major-desc">%data%</span></p>';
 
+/* Helper content for the footer sections starts here */
+var HTMLfooterContacts = '<ul class="footer-contacts"></ul>';
+var HTMLfooterContactsItem = '<li class="footer-contacts-item">';
+    HTMLfooterContactsItem += '<span class="footer-contact-title">%data1% - </span>';
+    HTMLfooterContactsItem += '<span class="footer-contact-value">%data2%</span>';
+    HTMLfooterContactsItem += '</li>';
+
 var googleMap = '<hr><div id="map"></div>';
 // declares a global map variable
 var map;

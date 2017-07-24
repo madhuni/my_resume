@@ -45,17 +45,29 @@ function displayTitle() {
 }
 
 function displayContact() {
+    var keys = []; 
     var contacts = [];
     $.each(bio.contacts, function(key, value){
         contacts.push(value);
+        keys.push(key[0].toUpperCase() + key.slice(1));
     });    
     // console.log(contacts);
+    // console.log(keys);
+
+    /* Adding the contact list in the footer */
+    $("footer:last").append(HTMLfooterContacts);
+
     for (var i=0; i<contacts.length; i++) {
         var formattedFaClass = bio.extraDetails.contactInfoLogo[i];
         var formattedContactType = contacts[i];
         var formattedContect = HTMLcontactContent.replace("%font-awesome-class%",formattedFaClass).replace("%data%", formattedContactType);
+
+        var formattedFooterContactsItem = HTMLfooterContactsItem.replace("%data1%", keys[i]).replace("%data2%", contacts[i]);
+
         $("#contact-section:last").append(HTMLcontactContainer);
         $("#contact-section .details:last").append(formattedContect);
+
+        $('.footer-contacts:last').append(formattedFooterContactsItem);
     }
 }
 
@@ -99,10 +111,9 @@ var work = {
 };
 
 work.display = function() {
-    var i;
     var jobItems = work.jobs;
     // console.log(jobItems);    
-    for (i=0; i<jobItems.length; i++) {
+    for (var i=0; i<jobItems.length; i++) {
         var formattedDescription = HTMLjobDescription.replace("%data%", jobItems[i].description);
         var formattedCompanyLogo = HTMLcompanyLogo.replace("%data%", jobItems[i].companyLogo);
         var formattedCompany = HTMLcompany.replace("%data%",jobItems[i].employer);
@@ -131,17 +142,17 @@ var projects = [{
     title: "My Portfolio Project",
     dates: "December 2016",
     description: "Built with HTML-5, CSS-3, Bootstrap Framework. Fully responsive across all devices",
-    images: "http://www.zealopers.com/wp-content/uploads/2015/05/web-development-450x300.png"
+    images: ["http://www.zealopers.com/wp-content/uploads/2015/05/web-development-450x300.png"]
 }, {
     title: "My Interactive Resume",
     dates: "Jan 2016",
     description: "Built with HTML-5, CSS-3, Bootstrap Framework. Fully responsive across all devices",
-    images: "http://www.zealopers.com/wp-content/uploads/2015/05/web-development-450x300.png"
+    images: ["http://www.zealopers.com/wp-content/uploads/2015/05/web-development-450x300.png"]
 }, {
     title: "My Interactive Resume",
     dates: "Jan 2016",
     description: "Built with HTML-5, CSS-3, Bootstrap Framework. Fully responsive across all devices",
-    images: "http://www.zealopers.com/wp-content/uploads/2015/05/web-development-450x300.png"
+    images: ["http://www.zealopers.com/wp-content/uploads/2015/05/web-development-450x300.png"]
 }];
 
 
@@ -153,7 +164,11 @@ projects.display = function() {
         
         var formattedArticleHeading = HTMLprojectArticleHeading.replace("%data%", items[i].title);
         var formattedDuration = HTMLprojectDuration.replace("%data%", items[i].dates);
-        var formattedImageSrc = HTMLimageContainer.replace("%data%", items[i].images);
+
+        /* As per the design my project section will have only one image for each project. 
+        * So just adding the firt image of the images array for each project.
+        */
+        var formattedImageSrc = HTMLimageContainer.replace("%data%", items[i].images[0]);
         var formattedDescription = HTMLprojectDescription.replace("%data%", items[i].description);
         
         
@@ -169,13 +184,13 @@ var education = {
         name: "Moradabad Institute of Technology",
         location: "Moradabad, Uttar Pradesh",
         degree: "B.Tech.",
-        majors: "Mechanical Engineering",
+        majors: ["Mechanical Engineering"],
         dates: "2010-2014"
     }/*, {
         name: "Chitragupt Inter College",
         location: "Moradabad, Uttar Pradesh",
         degree: "Intermediate",
-        majors: "Physics, Chemistry, Maths",
+        majors: ["Physics", "Chemistry", "Maths"],
         dates: "2007-2009"
     }, {
         name: "Chitragupt Inter College",
@@ -213,7 +228,13 @@ education.display = function () {
         var formattedArticleHeading = HTMLarticleHeading2.replace("%data%",eduType2[index].name).replace("%data%",eduType2[index].degree);
         var formattedEduDuration = HTMLeduDuration2.replace("%data%", eduType2[index].dates);
         var formattedLocation = HTMLeduLocation.replace("%data%", eduType2[index].location);
-        var formattedMajor = HTMLmajor2.replace("%data%", eduType2[index].majors);
+
+        var majorsString = "";
+        for (var i=0; i<eduType2[index].majors.length; i++) {
+            majorsString += eduType2[index].majors[i] + ", ";
+        }
+        
+        formattedMajor = HTMLmajor2.replace("%data%", majorsString.substr(majorsString[0], majorsString.length-2));
         
         $("#academic-education:last").append(HTMLacademicEduArticle);
         $(".academic-edu-article:last").append(formattedArticleHeading);

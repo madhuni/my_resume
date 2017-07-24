@@ -472,21 +472,49 @@ article {
 
 /* Rules for the footer starts here */
 footer {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     margin-top: 20px;
-    background-color: #222;
+    background-color: rgb(34, 34, 34);
     padding-bottom: 10px;
 }
 
-footer p {
+footer .section-heading {
     text-align: center;
-    padding: 10px;
-    font-size: 1.4em;
-    font-weight: bold;
+    margin-top: 10px;
     color: white;
 }
 
+.footer-contacts {
+    list-style: none;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-contacts-item {
+    margin: 5px 10px;
+}
+
+.footer-contact-title,
+.footer-contact-value {
+    font-size: 14px !important;
+}
+
+.footer-contact-title {
+    color: orange;
+}
+
+.footer-contact-value {
+    color: white;
+}
+
+.footer-hr {
+    width: 85%;
+    margin: 10px auto 0;
+}
 footer a {
     text-decoration: none;
     color: black;
@@ -505,7 +533,8 @@ footer a {
 /* Fontawesome fonts color starts here */
 
 /* Social media icons */
-.fa-google-plus {
+/* Commenting the styles for the future use */
+/*.fa-google-plus {
     color: #f34a38;
 }
 
@@ -527,7 +556,7 @@ footer a {
 
 .fa-map-marker {
     color: red;
-}
+}*/
 
 @media screen and (min-width: 420px) {
     .job-items {

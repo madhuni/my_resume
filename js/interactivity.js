@@ -20,7 +20,7 @@ $(function($) {
     }
 
     function stopToggling(parent) {
-        console.log("stopToggling function is working");
+        // console.log("stopToggling function is working");
         var tapTarget = parent.children('.section-heading');
         tapTarget.click(function(evt) {
             evt.stopPropagation();

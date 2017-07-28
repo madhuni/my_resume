@@ -5,15 +5,16 @@ var bio = {
     contacts: {
         location: "Bangalore, India",
         email: "kmmadhuni@gmail.com",
-        mobile: "+91-XXXXXXXXXX",
-        github: "https://github.com/madhuni",
-        portfolio: "https://madhuni.github.io"
+        // mobile: "+91-XXXXXXXXXX",
+        github: "<a href='https://github.com/madhuni'>https://github.com/madhuni</a>",
+        linkedin: "<a href='https://www.linkedin.com/in/kanishka-madhuni-8a2058aa/'>Linkedin-profile</a>"
+        // portfolio: "https://madhuni.github.io"
     },
-    welcomeMessage: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    welcomeMessage: "Front End Web Developer skilled in HTML5, CSS3, Javascript, jQuery, Angular JS, Knockout JS and other front end web technologies. Experienced Application Analyst with a demonstrated history of working in the information technology and services industry.",
     skills: ["HTML-5", "CSS-3", "Javascript", "JQuery", "Bootstrap"],
     biopic: "./img/profile-pic-1.jpg",
     extraDetails : {
-        contactInfoLogo: ["fa-map-marker", "fa-envelope", "fa-phone", "fa-github-square", "fa-paperclip"],
+        contactInfoLogo: ["fa-map-marker", "fa-envelope", /*"fa-phone",*/ "fa-github-square"/*, "fa-paperclip"*/, "fa-linkedin"],
         skillLogoUrl: ["./img/web-tech-logo/html5.svg",
             "./img/web-tech-logo/css3.svg",
             "./img/web-tech-logo/js.svg",
@@ -22,7 +23,7 @@ var bio = {
         ],
         language: {
             "langDesc": ["English", "Hindi"],
-            "langPercent": ["85", "90"]
+            "langPercent": ["80", "95"]
         }
     }
 };
@@ -104,7 +105,7 @@ var work = {
         title: "Application Analyst",
         location: "Bangalore",
         dates: "April 2015 - Present",
-        description: "I have worked as a Application Analyst in the EDI. EDI which stands for Electronic Data Interchange is a third party team which the client use to exchange the different kind of files in different formates to their business partners. I had to moinitor the applicaton so that the flow of flies will remain fine and do the automation for cutting down the time in day to day operations.",
+        // description: "I have worked as a Application Analyst in the EDI. EDI which stands for Electronic Data Interchange is a third party team which the client use to exchange the different kind of files in different formates to their business partners. I had to moinitor the applicaton so that the flow of flies will remain fine and do the automation for cutting down the time in day to day operations.",
         companyLogo: "./img/cognizant_logo.png",
         experience: "1 Year, 9 Months"
     }]
@@ -122,7 +123,7 @@ work.display = function() {
         var formattedJobLocation = HTMLjobLocation.replace("%data%", jobItems[i].location);
         
         $("#work-experience:last").append(HTMLworkArticle);
-        $(".work-article:last").append(formattedDescription);
+        // $(".work-article:last").append(formattedDescription);
         $(".job-items:last").append(formattedCompanyLogo);
         $(".job-items:last").append(HTMLjobDescItems);
         $(".job-desc-items:last").append(formattedRole);
@@ -139,20 +140,30 @@ work.display = function() {
 /* Featured Project Obeject Goes Here */
 
 var projects = [{
-    title: "My Portfolio Project",
-    dates: "December 2016",
-    description: "Built with HTML-5, CSS-3, Bootstrap Framework. Fully responsive across all devices",
+    title: "Neighborhood Map",
+    dates: "Jun 2017 – Jul 2017",
+    description: "A single-page web application, built using the Knockout framework, that displays a Google Map of an area and various points of interest. Users can search all included landmarks and, when selected, additional information about a landmark is presented from the FourSquare and Wikipedia APIs.",
+    images: ["./img/map-project.PNG"]
+}, {
+    title: "Website Optimization",
+    dates: "Jul 2017 – Jul 2017",
+    description: "Optimized an inefficient web application's JavaScript, CSS and assets delivery, ensuring it runs at 60fps and achieves a PageSpeed score of at least 90.",
+    images: ["./img/optimization-project.jpg"]
+}, {
+    title: "Feed Reader Testing",
+    dates: "Jun 2017 – Jun 2017",
+    description: "Wrote comprehensive unit tests, using the Jasmine testing framework, for an RSS Feed Reader application that uses Google's RSS API.",
     images: ["http://www.zealopers.com/wp-content/uploads/2015/05/web-development-450x300.png"]
 }, {
-    title: "My Interactive Resume",
-    dates: "Jan 2016",
-    description: "Built with HTML-5, CSS-3, Bootstrap Framework. Fully responsive across all devices",
-    images: ["http://www.zealopers.com/wp-content/uploads/2015/05/web-development-450x300.png"]
+    title: "To-Do-List App",
+    dates: "Jun 2017 – Jun 2017",
+    description: "An AngularJS powered To-do-list app, enabled to keep track of the work need to be done in day to day office or work life.",
+    images: ["./img/to-do-list-app.jpg"]
 }, {
-    title: "My Interactive Resume",
-    dates: "Jan 2016",
-    description: "Built with HTML-5, CSS-3, Bootstrap Framework. Fully responsive across all devices",
-    images: ["http://www.zealopers.com/wp-content/uploads/2015/05/web-development-450x300.png"]
+    title: "Classic Arcade Game Clone",
+    dates: "Apr 2017 – Apr 2017",
+    description: "An HTML5 Canvas powered video game, developed using the best practices in Object Oriented JavaScript.",
+    images: ["./img/arcade-game.jpg"]
 }];
 
 

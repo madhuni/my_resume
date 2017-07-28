@@ -6,8 +6,8 @@ var bio = {
         location: "Bangalore, India",
         email: "kmmadhuni@gmail.com",
         // mobile: "+91-XXXXXXXXXX",
-        github: "<a href='https://github.com/madhuni'>https://github.com/madhuni</a>",
-        linkedin: "<a href='https://www.linkedin.com/in/kanishka-madhuni-8a2058aa/'>Linkedin-profile</a>"
+        github: "<a href='https://github.com/madhuni' target='_blank'>https://github.com/madhuni</a>",
+        linkedin: "<a href='https://www.linkedin.com/in/kanishka-madhuni-8a2058aa/' target='_blank'>Linkedin-profile</a>"
         // portfolio: "https://madhuni.github.io"
     },
     welcomeMessage: "Front End Web Developer skilled in HTML5, CSS3, Javascript, jQuery, Angular JS, Knockout JS and other front end web technologies. Experienced Application Analyst with a demonstrated history of working in the information technology and services industry.",

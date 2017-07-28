@@ -520,16 +520,17 @@ footer .section-heading {
 }
 
 .footer-contact-value {
-    color: white;
+    color: white !important;
 }
 
 .footer-hr {
     width: 85%;
     margin: 10px auto 0;
 }
+
 footer a {
     text-decoration: none;
-    color: black;
+    color: white
 }
 
 .social-icons {
@@ -554,7 +555,7 @@ footer a {
 ::-webkit-scrollbar
 {
     width: 5px;
-    height: 5px;
+    height: 11px;
     background-color: #F5F5F5;
 }
 

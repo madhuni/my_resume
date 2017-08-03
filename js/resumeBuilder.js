@@ -12,7 +12,7 @@ var bio = {
     },
     welcomeMessage: "Front End Web Developer skilled in HTML5, CSS3, Javascript, jQuery, Angular JS, Knockout JS and other front end web technologies. Experienced Application Analyst with a demonstrated history of working in the information technology and services industry.",
     skills: ["HTML-5", "CSS-3", "Javascript", "JQuery", "Bootstrap"],
-    biopic: "./img/profile-pic-1.jpg",
+    biopic: "./img/resume_pic.png",
     extraDetails : {
         contactInfoLogo: ["fa-map-marker", "fa-envelope", /*"fa-phone",*/ "fa-github-square"/*, "fa-paperclip"*/, "fa-linkedin"],
         skillLogoUrl: ["./img/web-tech-logo/html5.svg",

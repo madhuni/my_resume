@@ -11,7 +11,7 @@ var bio = {
         // portfolio: "https://madhuni.github.io"
     },
     welcomeMessage: "Front End Web Developer skilled in HTML5, CSS3, Javascript, jQuery, Angular JS, Knockout JS and other front end web technologies. Experienced Application Analyst with a demonstrated history of working in the information technology and services industry.",
-    skills: ["HTML-5", "CSS-3", "Javascript", "JQuery", "Bootstrap"],
+    skills: ["HTML-5", "CSS-3", "Javascript", "JQuery", "Bootstrap", "Angular JS", "Knockout JS"],
     biopic: "./img/resume_pic.png",
     extraDetails : {
         contactInfoLogo: ["fa-map-marker", "fa-envelope", /*"fa-phone",*/ "fa-github-square"/*, "fa-paperclip"*/, "fa-linkedin"],
@@ -19,7 +19,9 @@ var bio = {
             "./img/web-tech-logo/css3.svg",
             "./img/web-tech-logo/js.svg",
             "./img/web-tech-logo/jquery.svg",
-            "./img/web-tech-logo/bootstrap.svg"
+            "./img/web-tech-logo/bootstrap.svg",
+            "./img/web-tech-logo/angular.svg",
+            "./img/web-tech-logo/knockout.svg"
         ],
         language: {
             "langDesc": ["English", "Hindi"],
@@ -105,7 +107,7 @@ var work = {
         title: "Application Analyst",
         location: "Bangalore",
         dates: "April 2015 - Present",
-        // description: "I have worked as a Application Analyst in the EDI. EDI which stands for Electronic Data Interchange is a third party team which the client use to exchange the different kind of files in different formates to their business partners. I had to moinitor the applicaton so that the flow of flies will remain fine and do the automation for cutting down the time in day to day operations.",
+        description: "* Automated processes to reduce manual efforts up to 80%. <br> * Provided end to end solutions to the clients regarding various queries related to financial module of EDI. <br> * Monitored and maintained continuous flow of application by doing root cause analysis (RCA) of the errors and abends.",
         companyLogo: "./img/cognizant_logo.png",
         experience: "1 Year, 9 Months"
     }]
@@ -123,7 +125,7 @@ work.display = function() {
         var formattedJobLocation = HTMLjobLocation.replace("%data%", jobItems[i].location);
         
         $("#work-experience:last").append(HTMLworkArticle);
-        // $(".work-article:last").append(formattedDescription);
+        $(".work-article:last").append(formattedDescription);
         $(".job-items:last").append(formattedCompanyLogo);
         $(".job-items:last").append(HTMLjobDescItems);
         $(".job-desc-items:last").append(formattedRole);
@@ -143,27 +145,32 @@ var projects = [{
     title: "Neighborhood Map",
     dates: "Jun 2017 – Jul 2017",
     description: "A single-page web application, built using the Knockout framework, that displays a Google Map of an area and various points of interest. Users can search all included landmarks and, when selected, additional information about a landmark is presented from the FourSquare and Wikipedia APIs.",
-    images: ["./img/map-project.PNG"]
+    images: ["./img/project_images/project-neighborhood-map.jpg"],
+    url: "https://github.com/madhuni/neighborhood-map"
 }, {
     title: "Website Optimization",
     dates: "Jul 2017 – Jul 2017",
     description: "Optimized an inefficient web application's JavaScript, CSS and assets delivery, ensuring it runs at 60fps and achieves a PageSpeed score of at least 90.",
-    images: ["./img/optimization-project.jpg"]
+    images: ["./img/project_images/project-web-optimization.jpg"],
+    url: "https://github.com/madhuni/frontend-nanodegree-mobile-portfolio"
 }, {
     title: "Feed Reader Testing",
     dates: "Jun 2017 – Jun 2017",
     description: "Wrote comprehensive unit tests, using the Jasmine testing framework, for an RSS Feed Reader application that uses Google's RSS API.",
-    images: ["http://www.zealopers.com/wp-content/uploads/2015/05/web-development-450x300.png"]
+    images: ["./img/project_images/project-feed-render-testing.jpg"],
+    url: "https://github.com/madhuni/feed-render-testing"
 }, {
     title: "To-Do-List App",
     dates: "Jun 2017 – Jun 2017",
     description: "An AngularJS powered To-do-list app, enabled to keep track of the work need to be done in day to day office or work life.",
-    images: ["./img/to-do-list-app.jpg"]
+    images: ["./img/project_images/project-to-do-list.png"],
+    url: "https://github.com/madhuni/to-do-list-app"
 }, {
     title: "Classic Arcade Game Clone",
     dates: "Apr 2017 – Apr 2017",
     description: "An HTML5 Canvas powered video game, developed using the best practices in Object Oriented JavaScript.",
-    images: ["./img/arcade-game.jpg"]
+    images: ["./img/project_images/project-arcade-game.jpg"],
+    url: "https://github.com/madhuni/arcade-game"
 }];
 
 
@@ -173,7 +180,7 @@ projects.display = function() {
      
     for (var i=0; i<items.length; i++) {
         
-        var formattedArticleHeading = HTMLprojectArticleHeading.replace("%data%", items[i].title);
+        var formattedArticleHeading = HTMLprojectArticleHeading.replace("%data%", items[i].title).replace("%link%", items[i].url);
         var formattedDuration = HTMLprojectDuration.replace("%data%", items[i].dates);
 
         /* As per the design my project section will have only one image for each project. 
@@ -184,7 +191,7 @@ projects.display = function() {
         
         
         $("#project-wrapper:last").append(HTMLprojectArticle);
-        $(".projects-article:last").append(formattedArticleHeading).append(formattedDuration).append(formattedImageSrc).append(formattedDescription);
+        $(".projects-article:last").append(formattedImageSrc).append(formattedArticleHeading).append(formattedDuration).append(formattedDescription);
     }
 };
 
@@ -213,7 +220,13 @@ var education = {
     onlineCourses: [{
         title: "Front End Development Nanodegree",
         school: "Udacity",
-        dates: "December 2016 - Present",
+        dates: "December 2016 - July 2017",
+        url : "https://udacity.com"
+    },
+    {
+        title: "JavaScript: Understanding the Weird Parts",
+        school: "Udemy",
+        dates: "April 2017",
         url : "https://udacity.com"
     }]
 };
@@ -230,8 +243,8 @@ education.display = function () {
         
         $("#online-education:last").append(HTMLonlineEduArticle);
         $(".online-edu-article:last").append(formattedArticleHeading);
-        $(".online-edu-article:last").append(formattedEduDuration);
         $(".online-edu-article:last").append(formattedMajor);
+        $(".online-edu-article:last").append(formattedEduDuration);
         
     });
     
@@ -249,15 +262,15 @@ education.display = function () {
         
         $("#academic-education:last").append(HTMLacademicEduArticle);
         $(".academic-edu-article:last").append(formattedArticleHeading);
+        $(".academic-edu-article:last").append(formattedMajor);
         $(".academic-edu-article:last").append(formattedEduDuration);
         $(".academic-edu-article:last").append(formattedLocation);
-        $(".academic-edu-article:last").append(formattedMajor);
         
     });
     
-    $('<hr>').insertAfter(".academic-edu-article");
-    var lastChild = $("hr:last-child");
-    $(lastChild).remove();
+    // $('<hr>').insertAfter(".academic-edu-article");
+    // var lastChild = $("hr:last-child");
+    // $(lastChild).remove();
 };
 
 //here we are using the "failsafe" jQuery to initilaize all the functions

@@ -8,13 +8,16 @@ var bio = {
         // mobile: "+91-XXXXXXXXXX",
         github: "<a href='https://github.com/madhuni' target='_blank'>https://github.com/madhuni</a>",
         linkedin: "<a href='https://www.linkedin.com/in/kanishka-madhuni-8a2058aa/' target='_blank'>Linkedin-profile</a>"
-        // portfolio: "https://madhuni.github.io"
+    },
+    downloads: {
+        resume: "<a href='https://drive.google.com/file/d/0B3__gQQM_5VRemg5OENxTldrX1E/view?usp=sharing' target='_blank'>Download Resume</a>"
     },
     welcomeMessage: "Front End Web Developer skilled in HTML5, CSS3, Javascript, jQuery, Angular JS, Knockout JS and other front end web technologies. Experienced Application Analyst with a demonstrated history of working in the information technology and services industry.",
     skills: ["HTML-5", "CSS-3", "Javascript", "JQuery", "Bootstrap", "Angular JS", "Knockout JS"],
     biopic: "./img/resume_pic.png",
     extraDetails : {
         contactInfoLogo: ["fa-map-marker", "fa-envelope", /*"fa-phone",*/ "fa-github-square"/*, "fa-paperclip"*/, "fa-linkedin"],
+        downloadsLogo: ["fa-download"],
         skillLogoUrl: ["./img/web-tech-logo/html5.svg",
             "./img/web-tech-logo/css3.svg",
             "./img/web-tech-logo/js.svg",
@@ -33,6 +36,7 @@ var bio = {
 bio.display = function () {
     displayTitle();
     displayContact();
+    displayDownloads();
     displaySkills();
     displayLanguage();
     displayAboutMe();
@@ -53,10 +57,8 @@ function displayContact() {
     $.each(bio.contacts, function(key, value){
         contacts.push(value);
         keys.push(key[0].toUpperCase() + key.slice(1));
-    });    
-    // console.log(contacts);
-    // console.log(keys);
-
+    });
+        
     /* Adding the contact list in the footer */
     $("footer:last").append(HTMLfooterContacts);
 
@@ -69,8 +71,25 @@ function displayContact() {
 
         $("#contact-section:last").append(HTMLcontactContainer);
         $("#contact-section .details:last").append(formattedContect);
-
         $('.footer-contacts:last').append(formattedFooterContactsItem);
+    }
+}
+
+function displayDownloads() {
+    var keys = []; 
+    var downloads = [];
+    $.each(bio.downloads, function(key, value){
+        downloads.push(value);
+        keys.push(key[0].toUpperCase() + key.slice(1));
+    }); 
+
+    for (var i=0; i<downloads.length; i++) {
+        var formattedFaClass = bio.extraDetails.downloadsLogo[i];
+        var formattedDownloadType = downloads[i];
+        var formattedDownload = HTMLcontactContent.replace("%font-awesome-class%",formattedFaClass).replace("%data%", formattedDownloadType);
+
+        $("#download-section:last").append(HTMLcontactContainer);
+        $("#download-section .details:last").append(formattedDownload);
     }
 }
 

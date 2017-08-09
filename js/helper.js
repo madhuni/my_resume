@@ -30,7 +30,8 @@ var HTMLlangContent = '<span>%data%</span><progress value="%cur-value%" max="100
 // we will keep the "#work-experience" section in the HTML.
 // Section heading will also be there in the HTML.
 var HTMLworkArticle = '<article class="work-article container"><div class="job-items flex-box"></div></article>';
-var HTMLjobDescription = '<p class="job-description hidden">%data%</p><i class="fa fa-angle-down up-down" style="padding-left:5px;"></i><span class="more-details">Show more</span>';
+var HTMLjobDescription = '<p class="job-description hidden">%data%</p>';
+HTMLjobDescription +=  '<i class="fa fa-angle-down up-down" style="padding-left:5px;"></i><span class="more-details">Show more</span>';
 var HTMLcompanyLogo = '<div class="company-logo"><img src="%data%" alt="Company Logo" width="45" height="45"></div>';
 var HTMLjobDescItems = '<div class="job-desc-items"></div>';
 var HTMLcompany = '<h4 class="article-heading">%data%</h4>';
@@ -44,7 +45,7 @@ var HTMLaboutMe = '<div class="details"><p class="about-me-description"><i class
 // we will keep the "#projects" section in the HTML.
 // Section heading will also be there in the HTML.
 var HTMLprojectArticle = '<article class="projects-article container"></article>';
-var HTMLprojectArticleHeading = '<h4 class="article-heading">%data%</h4>';
+var HTMLprojectArticleHeading = '<a href="%link%" target="_blank"><h4 class="article-heading">%data%</h4></a>';
 var HTMLprojectDuration = '<div class="project-duration"><i class="fa fa-calendar"></i><time>%data%</time></div>';
 var HTMLimageContainer = '<div class="image-wrapper"><div class="image-container"><img src="%data%" alt="Project Image"></div></div>';
 var HTMLprojectDescription = '<p class="project-description">%data%</p>';
@@ -55,13 +56,13 @@ var HTMLprojectDescription = '<p class="project-description">%data%</p>';
 var HTMLonlineEduArticle = '<article class="online-edu-article container"></article>';
 var HTMLarticleHeading1 = '<h4 class="article-heading">%data%</h4>';
 var HTMLeduDuration1 = '<div class="edu-duration"><i class="fa fa-calendar"></i><time>%data%</time></div>';
-var HTMLmajor1 = '<p class="major"><span class="course">Course Name: </span><span class="course-desc">%data%</span></p>';
+var HTMLmajor1 = '<p class="major"><span class="course-desc">%data%</span></p>';
 
 var HTMLacademicEduArticle = '<article class="academic-edu-article container"></article>';
-var HTMLarticleHeading2 = '<h4 class="article-heading"><i class="fa fa-university"></i>%data% - %data%</h4>';
+var HTMLarticleHeading2 = '<h4 class="article-heading">%data% - %data%</h4>';
 var HTMLeduDuration2 = '<div class="edu-duration"><i class="fa fa-calendar"></i><time>%data%</time></div>';
 var HTMLeduLocation = '<div class="edu-location"><i class="fa fa-map-marker"></i><span class="location-description">%data%</span></div>';
-var HTMLmajor2 = '<p class="major"><span class="major-head">Major: </span><span class="major-desc">%data%</span></p>';
+var HTMLmajor2 = '<p class="major"><span class="major-desc">%data%</span></p>';
 
 /* Helper content for the footer sections starts here */
 var HTMLfooterContacts = '<ul class="footer-contacts"></ul>';

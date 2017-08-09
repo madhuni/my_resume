@@ -418,7 +418,7 @@ article {
     line-height: 1.5;
     display: block;
     /*height: 150px;*/
-    text-align: justify;
+    text-align: left;
 }
 
 /* Code for the "Education" section starts here */
@@ -441,8 +441,12 @@ article {
 }
 
 #educaiton article {
-    margin-bottom: 0;
+    margin-bottom: 10px;
     padding-bottom: 0;
+}
+
+#educaiton .article-heading {
+    padding: 0 !important;
 }
 
 .sub-section-heading {
@@ -454,7 +458,7 @@ article {
 }
 
 .edu-duration {
-    padding: 5px 0;
+    padding: 0;
 }
 
 .edu-duration i,
@@ -463,7 +467,7 @@ article {
 }
 
 .edu-location {
-    padding: 5px 0;
+    padding: 0;
 }
 
 .edu-location i {
@@ -471,7 +475,8 @@ article {
 }
 
 .major {
-    margin: 5px 0;
+    /*margin: 5px 0;*/
+    padding: 0;
     line-height: 1.5;
 }
 

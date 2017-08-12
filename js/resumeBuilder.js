@@ -126,7 +126,7 @@ var work = {
         title: "Application Analyst",
         location: "Bangalore",
         dates: "April 2015 - Present",
-        description: "* Automated processes to reduce manual efforts up to 80%. <br> * Provided end to end solutions to the clients regarding various queries related to financial module of EDI. <br> * Monitored and maintained continuous flow of application by doing root cause analysis (RCA) of the errors and abends.",
+        description: "● Automated application processes by creating Unix Shell scripting to reduce manual efforts on daily activities. <br> ● Provided end to end solutions and RCA to the clients on different incidents raised related to financial module of EDI. <br> ● Ensured effective data interchange within and outside the company by providing resolutions for production glitches. <br> ● Delivered effective training sessions and mentored the colleagues within the team.",
         companyLogo: "./img/cognizant_logo.png",
         experience: "1 Year, 9 Months"
     }]

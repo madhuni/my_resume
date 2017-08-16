@@ -10,7 +10,7 @@ var bio = {
         linkedin: "<a href='https://www.linkedin.com/in/kanishka-madhuni-8a2058aa/' target='_blank'>Linkedin-profile</a>"
     },
     downloads: {
-        resume: "<a href='https://drive.google.com/open?id=0B3__gQQM_5VRUXlGTlpWNnNHQTQ' target='_blank'>Download Resume</a>"
+        resume: "<a href='https://drive.google.com/open?id=0B3__gQQM_5VRREFRazlvR3RaODg' target='_blank'>Download Resume</a>"
     },
     welcomeMessage: "Front End Web Developer skilled in HTML5, CSS3, Javascript, jQuery, Angular JS, Knockout JS and other front end web technologies. Experienced Application Analyst with a demonstrated history of working in the information technology and services industry.",
     skills: ["HTML-5", "CSS-3", "Javascript", "JQuery", "Bootstrap", "Angular JS", "Knockout JS"],
